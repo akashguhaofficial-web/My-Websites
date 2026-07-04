@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA ORTHO | Future-Ready Smile Transformations</title>
+    <meta name="description" content="Experience the future of orthodontics. Combining AI-powered diagnostics with luxury care. Aligners, braces, and life-changing smile design.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS & Icon Libraries -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Animation Engines -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            obsidian: '#030712',
+                            slate: '#0F172A',
+                            gold: '#D97706',
+                            goldLight: '#F59E0B',
+                            teal: '#14B8A6',
+                            cyan: '#0EA5E9',
+                            electricBlue: '#3B82F6',
+                            luxuryGrey: '#1E293B',
+                            lightGrey: '#F8FAFC'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['"Syne"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .glass-card {
+            background: rgba(15, 23, 42, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .light .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            border: 1px solid rgba(15, 23, 42, 0.08);
+        }
+        .glow-cyan {
+            box-shadow: 0 0 40px -10px rgba(14, 165, 233, 0.3);
+        }
+        .glow-gold {
+            box-shadow: 0 0 40px -10px rgba(217, 119, 6, 0.2);
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .text-neon-gradient {
+            background: linear-gradient(135deg, #FFF 30%, #0EA5E9 70%, #14B8A6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .light .text-neon-gradient {
+            background: linear-gradient(135deg, #0F172A 30%, #0284C7 70%, #0D9488 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Morphing teeth representation classes */
+        .tooth-path {
+            transition: d 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+</head>
+<body class="bg-brand-obsidian text-slate-100 font-sans transition-colors duration-300 light:bg-slate-50 light:text-slate-900 overflow-x-hidden">
+
+    <!-- TOP ANNOUNCEMENT HERO BAR -->
+    <div id="top-alert" class="bg-gradient-to-r from-brand-cyan to-brand-teal text-brand-obsidian text-xs md:text-sm py-2 px-4 flex justify-between items-center z-50 relative font-semibold">
+        <div class="flex items-center gap-2 mx-auto">
+            <span class="bg-brand-obsidian text-white text-[10px] px-2 py-0.5 rounded-full uppercase tracking-wider animate-pulse">Live Offer</span>
+            <span>Get a complimentary AI diagnostics report + $500 off Invisalign.</span>
+            <a href="#booking" class="underline font-bold hover:opacity-80 transition ms-1">Secure Spot</a>
+        </div>
+        <button onclick="document.getElementById('top-alert').remove()" class="hover:opacity-70"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <!-- STICKY HEADER -->
+    <header class="sticky top-0 z-40 w-full glass-card border-b backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2">
+                <span class="text-2xl font-display font-extrabold tracking-tight">
+                    AURA<span class="text-brand-cyan">O</span>RTHO
+                </span>
+            </a>
+
+            <!-- Desktop Links -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-300 light:text-slate-600">
+                <a href="#services" class="hover:text-brand-cyan transition-colors">Treatments</a>
+                <a href="#ai-scanner" class="hover:text-brand-cyan transition-colors flex items-center gap-1.5">
+                    AI Smile Scanner <span class="bg-brand-cyan/20 text-brand-cyan text-[9px] px-1.5 py-0.5 rounded font-bold uppercase tracking-widest">Beta</span>
+                </a>
+                <a href="#glow-up" class="hover:text-brand-cyan transition-colors">Glow-Up Tool</a>
+                <a href="#faceoff" class="hover:text-brand-cyan transition-colors">Invisalign vs Braces</a>
+                <a href="#journey" class="hover:text-brand-cyan transition-colors">Your Journey</a>
+                <a href="#pricing" class="hover:text-brand-cyan transition-colors">Cost & Plans</a>
+            </nav>
+
+            <!-- Controls & CTAs -->
+            <div class="flex items-center gap-4">
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" class="p-2.5 rounded-full hover:bg-white/10 dark:hover:bg-slate-800 transition-colors" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon text-lg dark:hidden"></i>
+                    <i class="fa-solid fa-sun text-lg hidden dark:block text-brand-gold"></i>
+                </button>
+
+                <!-- Premium Floating CTA Trigger -->
+                <a href="#booking" class="hidden sm:inline-flex px-6 py-2.5 rounded-full bg-gradient-to-r from-brand-cyan to-brand-teal text-brand-obsidian font-bold text-xs uppercase tracking-wider hover:scale-[1.03] transition-all">
+                    Free Consultation
+                </a>
+
+                <!-- Mobile Navigation Trigger -->
+                <button id="mobile-menu-btn" class="lg:hidden p-2 text-xl hover:text-brand-cyan transition-all" aria-label="Menu">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden glass-card border-t py-4 px-6 space-y-4">
+            <a href="#services" class="block py-2 text-sm hover:text-brand-cyan">Treatments</a>
+            <a href="#ai-scanner" class="block py-2 text-sm hover:text-brand-cyan">AI Smile Scanner</a>
+            <a href="#glow-up" class="block py-2 text-sm hover:text-brand-cyan">Glow-Up Tool</a>
+            <a href="#faceoff" class="block py-2 text-sm hover:text-brand-cyan">Invisalign vs Braces</a>
+            <a href="#pricing" class="block py-2 text-sm hover:text-brand-cyan">Cost & Plans</a>
+            <a href="#booking" class="block py-3 text-center rounded-xl bg-brand-cyan text-brand-obsidian font-bold text-xs uppercase">Get Free Assessment</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- IMMERSIVE HERO SECTION -->
+        <section class="relative min-h-[calc(100vh-5rem)] flex items-center justify-center py-20 px-4 overflow-hidden border-b border-white/5">
+            <!-- Digital background grids and animated blurred meshes -->
+            <div class="absolute inset-0 pointer-events-none opacity-30">
+                <div class="absolute top-1/4 left-1/4 w-[400px] h-[400px] bg-brand-cyan/25 rounded-full blur-[100px]"></div>
+                <div class="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-brand-teal/20 rounded-full blur-[140px]"></div>
+            </div>
+
+            <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+                <!-- Content Column -->
+                <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass-card border border-brand-cyan/30 text-xs text-brand-cyan tracking-wider uppercase font-bold">
+                        <i class="fa-solid fa-sparkles"></i> World-Class 3D Alignment Tech
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-extrabold tracking-tight leading-none">
+                        Your Future <span class="text-neon-gradient">Smile Starts Today</span>.
+                    </h1>
+                    
+                    <p class="text-base sm:text-lg text-slate-300 dark:text-slate-400 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                        Say goodbye to clumsy impressions and outdated dental clinics. Step into our precision-built diagnostic studio, powered by advanced biological scans, custom clear aligners, and painless dental systems.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#booking" class="px-8 py-4 rounded-full bg-gradient-to-r from-brand-cyan to-brand-teal text-brand-obsidian font-bold hover:scale-[1.03] transition-all flex items-center justify-center gap-2 glow-cyan">
+                            <i class="fa-solid fa-calendar-plus"></i> Book Free Consultation
+                        </a>
+                        <a href="#ai-scanner" class="px-8 py-4 rounded-full glass-card border border-white/10 hover:border-brand-cyan/50 font-semibold transition-all flex items-center justify-center gap-2 hover:bg-white/5">
+                            <i class="fa-solid fa-wand-magic-sparkles text-brand-cyan"></i> Run Smile Scanner
+                        </a>
+                    </div>
+
+                    <!-- Trust Stats Grid -->
+                    <div class="pt-8 border-t border-white/5 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-2xl mx-auto lg:mx-0">
+                        <div>
+                            <span class="text-2xl sm:text-3xl font-display font-extrabold text-brand-cyan">25k+</span>
+                            <span class="text-[10px] text-slate-400 block mt-1 uppercase tracking-wider">Smiles Transformed</span>
+                        </div>
+                        <div>
+                            <span class="text-2xl sm:text-3xl font-display font-extrabold text-brand-cyan">8.5k+</span>
+                            <span class="text-[10px] text-slate-400 block mt-1 uppercase tracking-wider">Invisalign Aligners</span>
+                        </div>
+                        <div>
+                            <span class="text-2xl sm:text-3xl font-display font-extrabold text-brand-cyan">15+ Yrs</span>
+                            <span class="text-[10px] text-slate-400 block mt-1 uppercase tracking-wider">Clinical Mastery</span>
+                        </div>
+                        <div>
+                            <span class="text-2xl sm:text-3xl font-display font-extrabold text-brand-cyan">4.9 ★</span>
+                            <span class="text-[10px] text-slate-400 block mt-1 uppercase tracking-wider">Google Rating</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Hero Visual -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-[380px] aspect-[4/5] rounded-3xl overflow-hidden glass-card p-6 border flex flex-col justify-between glow-gold">
+                        <!-- Header interface elements -->
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center gap-1.5">
+                                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
+                                <span class="text-[10px] uppercase font-bold tracking-widest text-slate-400">Scan Engine Active</span>
+                            </div>
+                            <span class="text-[10px] font-mono text-brand-cyan bg-brand-cyan/10 px-2 py-0.5 rounded border border-brand-cyan/20">Aura OS v6.0</span>
+                        </div>
+
+                        <!-- Central Graphic: Dynamic SVG Morphing Tooth Model representing active structural changes -->
+                        <div class="my-auto flex flex-col items-center justify-center space-y-4">
+                            <svg class="w-40 h-40 text-brand-cyan drop-shadow-[0_0_20px_rgba(14,165,233,0.3)]" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <!-- Base tooth geometry path changing structure based on dynamic values -->
+                                <path id="morphing-tooth" class="tooth-path" d="M30 40 C30 25, 40 20, 50 25 C60 20, 70 25, 70 40 C70 55, 65 75, 50 85 C35 75, 30 55, 30 40 Z"/>
+                                <!-- Diagnostic HUD grid points -->
+                                <circle cx="50" cy="50" r="38" stroke="currentColor" stroke-width="0.5" stroke-dasharray="3 3" opacity="0.3"/>
+                                <line x1="50" y1="10" x2="50" y2="90" stroke="currentColor" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/>
+                                <line x1="10" y1="50" x2="90" y2="50" stroke="currentColor" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/>
+                            </svg>
+                            <span class="text-xs font-mono font-bold tracking-widest uppercase text-brand-gold" id="tooth-alignment-percent">Deviation: 18.2mm</span>
+                        </div>
+
+                        <!-- Navigation slider simulating corrective realignment on mouse hover or touch drag -->
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center text-[10px] text-slate-400 font-bold uppercase">
+                                <span>Simulate Realignment</span>
+                                <span id="alignment-index-label" class="text-brand-cyan font-mono">0% Correction</span>
+                            </div>
+                            <input id="alignment-slider" type="range" min="0" max="100" value="0" class="w-full accent-brand-cyan cursor-pointer">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LIVE STATISTICS (COUNTS DYNAMICALLY ON SCROLL) -->
+        <section id="live-stats" class="py-12 glass-card border-y relative z-10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div>
+                        <div class="text-3xl md:text-5xl font-display font-extrabold text-brand-cyan" id="stat-improved" data-target="25812">0</div>
+                        <p class="text-[10px] md:text-xs text-slate-400 uppercase tracking-widest mt-2">Smiles Perfected</p>
+                    </div>
+                    <div>
+                        <div class="text-3xl md:text-5xl font-display font-extrabold text-brand-cyan" id="stat-cases" data-target="8643">0</div>
+                        <p class="text-[10px] md:text-xs text-slate-400 uppercase tracking-widest mt-2">Invisalign Cases Completed</p>
+                    </div>
+                    <div>
+                        <div class="text-3xl md:text-5xl font-display font-extrabold text-brand-cyan" id="stat-years" data-target="15">0</div>
+                        <p class="text-[10px] md:text-xs text-slate-400 uppercase tracking-widest mt-2">Years Active Clinical Practice</p>
+                    </div>
+                    <div>
+                        <div class="text-3xl md:text-5xl font-display font-extrabold text-brand-cyan" id="stat-reviews" data-target="1000">0</div>
+                        <p class="text-[10px] md:text-xs text-slate-400 uppercase tracking-widest mt-2">5-Star Patient Reviews</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- REAL RESULTS: BEFORE/AFTER SLIDER MATRIX -->
+        <section class="py-24 max-w-7xl mx-auto px-4 space-y-12">
+            <div class="text-center max-w-3xl mx-auto space-y-4">
+                <span class="text-xs text-brand-cyan font-bold tracking-widest uppercase"><i class="fa-solid fa-images"></i> Transformation Vault</span>
+                <h2 class="text-3xl md:text-5xl font-display font-extrabold">True Smiles. True Stories.</h2>
+                <p class="text-slate-400">We do not just align teeth; we reconstruct confidence. Browse verified, complete diagnostic transformations of actual clinic patients.</p>
+            </div>
+
+            <!-- Case Gallery Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Case 1 -->
+                <div class="glass-card rounded-3xl overflow-hidden border border-white/5 space-y-4 flex flex-col justify-between group p-6">
+                    <div class="space-y-3">
+                        <span class="text-[10px] font-mono text-brand-teal uppercase tracking-wider">Invisalign • 8 Months</span>
+                        <h3 class="text-lg font-display font-bold">Severe Crowding & Smile Width Corrected</h3>
+                        
+                        <!-- Interactive Before/After slider layout for each case -->
+                        <div class="relative w-full aspect-video rounded-xl overflow-hidden before-after-slider cursor-ew-resize group/slider">
+                            <img src="https://images.unsplash.com/photo-1579684389782-64d84b5e9053?auto=format&fit=crop&q=80&w=600" class="absolute inset-0 w-full h-full object-cover select-none" alt="Before">
+                            <div class="absolute inset-0 overflow-hidden after-image-overlay" style="width: 50%;">
+                                <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&q=80&w=600" class="absolute inset-0 w-full h-full object-cover select-none max-w-none" style="width: 100%;" alt="After">
+                            </div>
+                            <div class="absolute top-0 bottom-0 left-1/2 w-0.5 bg-brand-cyan z-20 slider-bar pointer-events-none"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="border-t border-white/5 pt-4 space-y-2">
+                        <p class="text-xs text-slate-300">"I avoided speaking in front of people for years. Aura gave me my voice back."</p>
+                        <span class="text-[10px] font-bold text-slate-400">— Jessica K., Attorney</span>
+                    </div>
+                </div>
+
+                <!-- Case 2 -->
+                <div class="glass-card rounded-3xl overflow-hidden border border-white/5 space-y-4 flex flex-col justify-between group p-6">
+                    <div class="space-y-3">
+                        <span class="text-[10px] font-mono text-brand-cyan uppercase tracking-wider">Aura Braces • 14 Months</span>
+                        <h3 class="text-lg font-display font-bold">Class II Deep Overbite & Gaps Sealed</h3>
+                        
+                        <!-- Interactive Before/After slider layout for each case -->
+                        <div class="relative w-full aspect-video rounded-xl overflow-hidden before-after-slider cursor-ew-resize group/slider">
+                            <img src="https://images.unsplash.com/photo-1579684389782-64d84b5e9053?auto=format&fit=crop&q=80&w=600" class="absolute inset-0 w-full h-full object-cover select-none" alt="Before">
+                            <div class="absolute inset-0 overflow-hidden after-image-overlay" style="width: 50%;">
+                                <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&q=80&w=600" class="absolute inset-0 w-full h-full object-cover select-none max-w-none" style="width: 100%;" alt="After">
+                            </div>
+                            <div class="absolute top-0 bottom-0 left-1/2 w-0.5 bg-brand-cyan z-20 slider-bar pointer-events-none"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="border-t border-white/5 pt-4 space-y-2">
+                        <p class="text-xs text-slate-300">"The computerized treatment previews allowed me to visualize structural changes before starting."</p>
+                        <span class="text-[10px] font-bold text-slate-400">— Daniel T., UX Designer</span>
+                    </div>
+                </div>
+
+                <!-- Case 3 -->
+                <div class="glass-card rounded-3xl overflow-hidden border border-white/5 space-y-4 flex flex-col justify-between group p-6">
+                    <div class="space-y-3">
+                        <span class="text-[10px] font-mono text-brand-gold uppercase tracking-wider">Lingual Braces • 11 Months</span>
+                        <h3 class="text-lg font-display font-bold">Adult Hidden Alignment Restoration</h3>
+                        
+                        <!-- Interactive Before/After slider layout for each case -->
+                        <div class="relative w-full aspect-video rounded-xl overflow-hidden before-after-slider cursor-ew-resize group/slider">
+                            <img src="https://images.unsplash.com/photo-1579684389782-64d84b5e9053?auto=format&fit=crop&q=80&w=600" class="absolute inset-0 w-full h-full object-cover select-none" alt="Before">
+                            <div class="absolute inset-0 overflow-hidden after-image-overlay" style="width: 50%;">
+                                <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&q=80&w=600" class="absolute inset-0 w-full h-full object-cover select-none max-w-none" style="width: 100%;" alt="After">
+                            </div>
+                            <div class="absolute top-0 bottom-0 left-1/2 w-0.5 bg-brand-cyan z-20 slider-bar pointer-events-none"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="border-t border-white/5 pt-4 space-y-2">
+                        <p class="text-xs text-slate-300">"My custom lingual braces were completely invisible from the outside. Incredible."</p>
+                        <span class="text-[10px] font-bold text-slate-400">— Sarah M., Corporate Executive</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI SMILE SCANNER MODULE -->
+        <section id="ai-scanner" class="py-24 bg-slate-950/40 border-y border-white/5">
+            <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-xs text-brand-cyan font-bold tracking-widest uppercase"><i class="fa-solid fa-robot"></i> Generative Diagnosis</span>
+                    <h2 class="text-3xl md:text-5xl font-display font-extrabold leading-tight">Virtual AI Alignment Scanner</h2>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Our advanced cloud algorithms analyze facial markers to estimate crowding index, bite layout symmetry, and treatment timelines instantly from a standard selfie photo.
+                    </p>
+                    <div class="p-4 rounded-xl bg-white/5 border border-white/5 flex gap-3 items-center">
+                        <i class="fa-solid fa-shield-halved text-brand-cyan text-lg"></i>
+                        <p class="text-[10px] text-slate-400 leading-normal">All photos are automatically removed from our servers after rendering diagnostic outputs. HIPAA-compliant encryption.</p>
+                    </div>
+                </div>
+
+                <!-- Interactive Scanning Sandbox -->
+                <div class="lg:col-span-7 glass-card p-8 rounded-3xl border border-white/10 space-y-6 relative overflow-hidden" id="scanner-sandbox">
+                    <!-- Scanner Target Interface Overlay -->
+                    <div class="relative w-full aspect-video bg-slate-950/80 rounded-2xl overflow-hidden border border-white/5 flex flex-col justify-between p-4" id="scan-view-box">
+                        <!-- Diagnostic Reticles -->
+                        <div class="absolute top-4 left-4 w-4 h-4 border-t-2 border-l-2 border-brand-cyan"></div>
+                        <div class="absolute top-4 right-4 w-4 h-4 border-t-2 border-r-2 border-brand-cyan"></div>
+                        <div class="absolute bottom-4 left-4 w-4 h-4 border-b-2 border-l-2 border-brand-cyan"></div>
+                        <div class="absolute bottom-4 right-4 w-4 h-4 border-b-2 border-r-2 border-brand-cyan"></div>
+                        
+                        <!-- Floating Sweep Line -->
+                        <div class="absolute inset-x-0 h-0.5 bg-gradient-to-r from-transparent via-brand-cyan to-transparent shadow-lg shadow-brand-cyan/80 animate-[bounce_3s_infinite] hidden" id="scan-laser-line"></div>
+
+                        <!-- Scan UI Prompts -->
+                        <div class="m-auto text-center space-y-3 z-10" id="scan-view-prompt">
+                            <i class="fa-solid fa-camera text-3xl text-brand-cyan"></i>
+                            <p class="text-xs text-slate-300 font-bold">Simulate Scanner with Sample File</p>
+                            <button onclick="startSelfieScanSim()" class="px-5 py-2 rounded-full bg-brand-cyan text-brand-obsidian text-xs font-bold uppercase tracking-wider hover:scale-[1.03] transition-all">
+                                Run Diagnostics
+                            </button>
+                        </div>
+
+                        <!-- Scanning State Screen -->
+                        <div class="m-auto text-center space-y-3 z-10 hidden" id="scan-view-processing">
+                            <div class="w-10 h-10 border-4 border-brand-cyan border-t-transparent animate-spin rounded-full mx-auto"></div>
+                            <span class="text-[10px] font-bold text-brand-cyan tracking-widest uppercase animate-pulse">Running Diagnostic AI Pass...</span>
+                        </div>
+
+                        <!-- Diagnostic Output Panel (Revealed) -->
+                        <div class="absolute inset-0 bg-slate-950/95 p-6 flex flex-col justify-between hidden z-20" id="scan-view-report">
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <span class="text-[10px] text-slate-400 block uppercase font-bold tracking-widest">Symmetry Score</span>
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-full bg-white/10 h-2 rounded-full overflow-hidden">
+                                            <div class="bg-brand-cyan h-full" style="width: 68%;"></div>
+                                        </div>
+                                        <span class="text-xs font-mono font-bold text-brand-cyan">68/100</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="text-[10px] text-slate-400 block uppercase font-bold tracking-widest">Crowding Matrix</span>
+                                    <span class="text-xs text-amber-400 font-bold">Moderate (4.2mm gap deviation)</span>
+                                </div>
+                                <div>
+                                    <span class="text-[10px] text-slate-400 block uppercase font-bold tracking-widest">Estimated Treatment Time</span>
+                                    <span class="text-xs text-slate-200 font-bold">9-12 Months (Clear Aligners)</span>
+                                </div>
+                                <div>
+                                    <span class="text-[10px] text-slate-400 block uppercase font-bold tracking-widest">Confidence Potential</span>
+                                    <span class="text-xs text-emerald-400 font-bold">94% Potential Alignment</span>
+                                </div>
+                            </div>
+                            <div class="pt-4 border-t border-white/5 flex gap-2">
+                                <a href="#booking" class="flex-1 py-2.5 text-center bg-brand-cyan text-brand-obsidian text-xs font-bold uppercase rounded-lg">Lock Recommended Session</a>
+                                <button onclick="resetSelfieScanSim()" class="px-4 py-2.5 bg-white/5 rounded-lg text-xs font-bold">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TREATMENTS SELECTOR (NETFLIX STYLE) -->
+        <section id="services" class="py-24 max-w-7xl mx-auto px-4 space-y-12 overflow-hidden">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+                <div class="space-y-2">
+                    <span class="text-xs text-brand-cyan font-bold tracking-widest uppercase"><i class="fa-solid fa-tooth"></i> Interactive Treatments Showcase</span>
+                    <h2 class="text-3xl md:text-5xl font-display font-extrabold">Next-Gen Treatment Options</h2>
+                </div>
+                <!-- Nav Arrows -->
+                <div class="flex gap-2">
+                    <button onclick="scrollTreatments(-1)" class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:border-brand-cyan transition text-slate-300">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                    <button onclick="scrollTreatments(1)" class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:border-brand-cyan transition text-slate-300">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Horizontal Track -->
+            <div class="flex overflow-x-auto gap-6 scroll-smooth scrollbar-hide py-4 px-2" id="treatment-track">
+                
+                <!-- Invisalign -->
+                <div class="flex-none w-80 glass-card p-6 rounded-3xl border border-white/5 space-y-4 flex flex-col justify-between hover:scale-[1.01] transition-all cursor-pointer" onclick="openTreatmentModal('invisalign')">
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-start">
+                            <span class="text-xs font-mono text-brand-cyan">Clear Alignment</span>
+                            <span class="text-[10px] bg-brand-cyan/20 text-brand-cyan px-2 py-0.5 rounded font-bold">Popular</span>
+                        </div>
+                        <h3 class="text-xl font-display font-bold">Invisalign® Clear Aligners</h3>
+                        <p class="text-xs text-slate-400">Perfect alignment path using premium medical-grade clear plastic, completely unnoticeable for active adults and teens.</p>
+                    </div>
+                    <div class="pt-4 border-t border-white/5 flex justify-between items-center text-xs font-bold text-brand-cyan">
+                        <span>Details & Costing</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                </div>
+
+                <!-- Modern Metal Braces -->
+                <div class="flex-none w-80 glass-card p-6 rounded-3xl border border-white/5 space-y-4 flex flex-col justify-between hover:scale-[1.01] transition-all cursor-pointer" onclick="openTreatmentModal('metal')">
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-start">
+                            <span class="text-xs font-mono text-brand-teal">Low Profile</span>
+                        </div>
+                        <h3 class="text-xl font-display font-bold">Modern Metal Braces</h3>
+                        <p class="text-xs text-slate-400">High-tension, micro-sized brackets for fastest orthodontic alignment on challenging structural adjustments.</p>
+                    </div>
+                    <div class="pt-4 border-t border-white/5 flex justify-between items-center text-xs font-bold text-brand-cyan">
+                        <span>Details & Costing</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                </div>
+
+                <!-- Hidden Lingual Braces -->
+                <div class="flex-none w-80 glass-card p-6 rounded-3xl border border-white/5 space-y-4 flex flex-col justify-between hover:scale-[1.01] transition-all cursor-pointer" onclick="openTreatmentModal('lingual')">
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-start">
+                            <span class="text-xs font-mono text-brand-gold">Invisible Care</span>
+                        </div>
+                        <h3 class="text-xl font-display font-bold">Lingual (Behind Teeth) Braces</h3>
+                        <p class="text-xs text-slate-400">Placed entirely on the inside surface of teeth, custom structural systems offering absolute cosmetic invisibility.</p>
+                    </div>
+                    <div class="pt-4 border-t border-white/5 flex justify-between items-center text-xs font-bold text-brand-cyan">
+                        <span>Details & Costing</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                </div>
+
+                <!-- Ceramic Braces -->
+                <div class="flex-none w-80 glass-card p-6 rounded-3xl border border-white/5 space-y-4 flex flex-col justify-between hover:scale-[1.01] transition-all cursor-pointer" onclick="openTreatmentModal('ceramic')">
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-start">
+                            <span class="text-xs font-mono text-slate-400">Enamel Match</span>
+                        </div>
+                        <h3 class="text-xl font-display font-bold">Ceramic Aesthetic Braces</h3>
+                        <p class="text-xs text-slate-400">Translucent ceramic components designed to blend directly with the natural color scheme of teeth enamel.</p>
+                    </div>
+                    <div class="pt-4 border-t border-white/5 flex justify-between items-center text-xs font-bold text-brand-cyan">
+                        <span>Details & Costing</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TREATMENT DETAILS OVERLAY MODAL -->
+        <div id="treatment-modal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-50 flex justify-end hidden opacity-0 transition-all duration-300">
+            <div class="w-full max-w-lg bg-brand-obsidian border-l border-white/10 h-full p-8 overflow-y-auto space-y-8 relative flex flex-col justify-between">
+                <div>
+                    <button onclick="closeTreatmentModal()" class="absolute top-6 right-6 p-2 rounded-full hover:bg-white/5 text-slate-400 hover:text-white transition-colors">
+                        <i class="fa-solid fa-xmark text-lg"></i>
+                    </button>
+                    
+                    <div class="space-y-2 pt-6">
+                        <span id="t-modal-category" class="text-xs font-mono text-brand-cyan uppercase tracking-widest block font-bold">Category</span>
+                        <h3 id="t-modal-title" class="text-3xl font-display font-bold text-slate-100">Treatment Plan</h3>
+                    </div>
+
+                    <!-- Treatment parameters metadata grid -->
+                    <div class="grid grid-cols-2 gap-4 mt-8">
+                        <div class="p-4 rounded-xl glass-card border border-white/5">
+                            <span class="text-[10px] text-slate-400 block uppercase tracking-wider">Average Duration</span>
+                            <span id="t-modal-duration" class="text-base font-bold text-slate-200">12 Months</span>
+                        </div>
+                        <div class="p-4 rounded-xl glass-card border border-white/5">
+                            <span class="text-[10px] text-slate-400 block uppercase tracking-wider">Monthly Payment Options</span>
+                            <span id="t-modal-cost" class="text-base font-bold text-brand-cyan">$99 / mo</span>
+                        </div>
+                    </div>
+
+                    <!-- Description block -->
+                    <div class="space-y-3 mt-6">
+                        <span class="text-xs font-bold uppercase tracking-widest text-slate-400">Overview Plan</span>
+                        <p id="t-modal-desc" class="text-xs text-slate-300 leading-relaxed">Our clear aligners represent premium comfort design patterns, eliminating standard monthly adjustment routines.</p>
+                    </div>
+
+                    <!-- Ideal candidates list -->
+                    <div class="space-y-3 mt-6">
+                        <span class="text-xs font-bold uppercase tracking-widest text-slate-400">Ideal Candidates</span>
+                        <ul id="t-modal-candidates" class="space-y-2 text-xs text-slate-400 list-disc pl-5">
+                            <li>Individuals wanting unnoticeable structural solutions</li>
+                            <li>Active lifestyles needing flexible diet patterns</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Action Triggers -->
+                <div class="pt-6 border-t border-white/5 flex gap-4">
+                    <a href="#booking" onclick="closeTreatmentModal()" class="flex-1 py-4 text-center rounded-xl bg-brand-cyan text-brand-obsidian font-bold text-xs uppercase tracking-widest glow-cyan">Free Consultation</a>
+                    <a href="#pricing" onclick="closeTreatmentModal()" class="px-5 py-4 rounded-xl bg-white/5 hover:bg-white/10 font-bold text-xs flex items-center justify-center">Estimator</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- GLOW-UP CALCULATOR (GEN-Z ENGINE) -->
+        <section id="glow-up" class="py-24 bg-slate-950/40 border-y border-white/5">
+            <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-xs text-brand-cyan font-bold tracking-widest uppercase"><i class="fa-solid fa-wand-magic-sparkles"></i> Glow-Up Profiler</span>
+                    <h2 class="text-3xl md:text-5xl font-display font-extrabold leading-tight">What Will Your Smile Glow-Up Look Like?</h2>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Calculate your structural confidence potential instantly. Provide basic metrics regarding tooth spacing, age parameters, and daily routine style to calculate optimal outcomes.
+                    </p>
+                </div>
+
+                <!-- Calculator Container App -->
+                <div class="lg:col-span-7 glass-card p-8 rounded-3xl border border-white/10" id="glow-up-container">
+                    <div id="glow-step-1" class="space-y-6">
+                        <h3 class="text-lg font-display font-bold">1. Select your target age demographic:</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <button onclick="setGlowMetric('age', 'teen', 1)" class="p-4 rounded-xl border border-white/15 bg-white/5 hover:border-brand-cyan transition text-xs font-bold uppercase text-center tracking-wider glow-age-btn">
+                                Teen (12-18)
+                            </button>
+                            <button onclick="setGlowMetric('age', 'adult', 1)" class="p-4 rounded-xl border border-white/15 bg-white/5 hover:border-brand-cyan transition text-xs font-bold uppercase text-center tracking-wider glow-age-btn">
+                                Adult (19+)
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="glow-step-2" class="space-y-6 hidden">
+                        <h3 class="text-lg font-display font-bold">2. What is your primary dental concern?</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                            <button onclick="setGlowMetric('concern', 'crowding', 2)" class="p-4 rounded-xl border border-white/15 bg-white/5 hover:border-brand-cyan transition text-xs font-bold uppercase tracking-wider text-center">
+                                Crowding
+                            </button>
+                            <button onclick="setGlowMetric('concern', 'gaps', 2)" class="p-4 rounded-xl border border-white/15 bg-white/5 hover:border-brand-cyan transition text-xs font-bold uppercase tracking-wider text-center">
+                                Spacing Gaps
+                            </button>
+                            <button onclick="setGlowMetric('concern', 'bite', 2)" class="p-4 rounded-xl border border-white/15 bg-white/5 hover:border-brand-cyan transition text-xs font-bold uppercase tracking-wider text-center">
+                                Over/Underbite
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="glow-step-3" class="space-y-6 hidden">
+                        <h3 class="text-lg font-display font-bold">3. What matters most to you during treatment?</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                            <button onclick="setGlowMetric('lifestyle', 'discreet', 3)" class="p-4 rounded-xl border border-white/15 bg-white/5 hover:border-brand-cyan transition text-xs font-bold uppercase tracking-wider text-center">
+                                Invisibility
+                            </button>
+                            <button onclick="setGlowMetric('lifestyle', 'speed', 3)" class="p-4 rounded-xl border border-white/15 bg-white/5 hover:border-brand-cyan transition text-xs font-bold uppercase tracking-wider text-center">
+                                Fast Results
+                            </button>
+                            <button onclick="setGlowMetric('lifestyle', 'cost', 3)" class="p-4 rounded-xl border border-white/15 bg-white/5 hover:border-brand-cyan transition text-xs font-bold uppercase tracking-wider text-center">
+                                Budget Friendly
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Output Results Dashboard -->
+                    <div id="glow-results" class="space-y-6 hidden">
+                        <div class="bg-gradient-to-r from-brand-cyan/10 to-brand-teal/10 border border-brand-cyan/25 p-6 rounded-2xl space-y-4">
+                            <h3 class="text-xl font-display font-bold text-brand-cyan">Your Transformation Estimate</h3>
+                            
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <span class="text-[9px] text-slate-400 uppercase font-bold tracking-widest block">Confidence Potential</span>
+                                    <span class="text-2xl font-display font-extrabold text-slate-100" id="glow-out-potential">95%</span>
+                                </div>
+                                <div>
+                                    <span class="text-[9px] text-slate-400 uppercase font-bold tracking-widest block">Recommended Solution</span>
+                                    <span class="text-sm font-bold text-brand-cyan block mt-1" id="glow-out-reco">Invisalign® Aligners</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <a href="#booking" class="flex-1 py-4 text-center rounded-xl bg-brand-cyan text-brand-obsidian font-bold text-xs uppercase tracking-widest glow-cyan">Lock Assessment Slot</a>
+                            <button onclick="resetGlowCalc()" class="px-5 py-4 rounded-xl bg-white/5 hover:bg-white/10 text-xs font-bold uppercase">Reset</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INVISALIGN VS BRACES FACE-OFF (GAMING LOOK) -->
+        <section id="faceoff" class="py-24 max-w-7xl mx-auto px-4 space-y-12">
+            <div class="text-center max-w-3xl mx-auto space-y-4">
+                <span class="text-xs text-brand-cyan font-bold tracking-widest uppercase"><i class="fa-solid fa-gamepad"></i> Gaming-Style Comparison</span>
+                <h2 class="text-3xl md:text-5xl font-display font-extrabold">Invisalign vs Braces Face-Off</h2>
+                <p class="text-slate-400">Compare treatment paths directly through realistic criteria categories to determine your winning selection.</p>
+            </div>
+
+            <!-- Face-Off Interactive Cards -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                
+                <!-- Left: Invisalign Stats Card -->
+                <div class="lg:col-span-5 glass-card p-8 rounded-3xl border border-brand-cyan/30 space-y-6 relative overflow-hidden">
+                    <div class="absolute -top-12 -left-12 w-32 h-32 bg-brand-cyan/10 rounded-full blur-2xl"></div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-xs font-mono text-brand-cyan font-bold tracking-wider">Aura Clear Class</span>
+                        <span class="text-2xl font-display font-bold">ALIGNERS</span>
+                    </div>
+                    
+                    <div class="space-y-4 text-xs">
+                        <div class="flex justify-between border-b border-white/5 pb-2">
+                            <span class="text-slate-400">Visibility Rating</span>
+                            <span class="font-bold text-emerald-400">98% Invisible</span>
+                        </div>
+                        <div class="flex justify-between border-b border-white/5 pb-2">
+                            <span class="text-slate-400">Dietary Freedom</span>
+                            <span class="font-bold text-emerald-400">Unlimited (Removable)</span>
+                        </div>
+                        <div class="flex justify-between border-b border-white/5 pb-2">
+                            <span class="text-slate-400">Maintenance</span>
+                            <span class="font-bold text-emerald-400">Very Simple</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-slate-400">Standard Duration</span>
+                            <span class="font-bold text-slate-200">6 to 12 Months</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Center VS Indicator -->
+                <div class="lg:col-span-2 text-center">
+                    <span class="inline-flex w-14 h-14 rounded-full bg-brand-cyan text-brand-obsidian font-display font-black items-center justify-center text-xl shadow-lg shadow-brand-cyan/30">VS</span>
+                </div>
+
+                <!-- Right: Braces Stats Card -->
+                <div class="lg:col-span-5 glass-card p-8 rounded-3xl border border-brand-gold/30 space-y-6 relative overflow-hidden">
+                    <div class="absolute -top-12 -right-12 w-32 h-32 bg-brand-gold/10 rounded-full blur-2xl"></div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-xs font-mono text-brand-gold font-bold tracking-wider">High-Tension Class</span>
+                        <span class="text-2xl font-display font-bold">BRACES</span>
+                    </div>
+                    
+                    <div class="space-y-4 text-xs">
+                        <div class="flex justify-between border-b border-white/5 pb-2">
+                            <span class="text-slate-400">Visibility Rating</span>
+                            <span class="font-bold text-slate-400">Visible (Option Metallic or Ceramic)</span>
+                        </div>
+                        <div class="flex justify-between border-b border-white/5 pb-2">
+                            <span class="text-slate-400">Dietary Freedom</span>
+                            <span class="font-bold text-amber-500">Restricted Hard/Sticky Foods</span>
+                        </div>
+                        <div class="flex justify-between border-b border-white/5 pb-2">
+                            <span class="text-slate-400">Maintenance</span>
+                            <span class="font-bold text-amber-500">Requires Specialized Brushes</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-slate-400">Standard Duration</span>
+                            <span class="font-bold text-slate-200">12 to 18 Months</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SMILE JOURNEY TIMELINE TRACKER (MOBILE APP PREVIEW STYLE) -->
+        <section id="journey" class="py-24 bg-slate-950/40 border-y border-white/5">
+            <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-xs text-brand-cyan font-bold tracking-widest uppercase"><i class="fa-solid fa-route"></i> Chronology Steps</span>
+                    <h2 class="text-3xl md:text-5xl font-display font-extrabold leading-tight">Your Digital Smile Journey</h2>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Track progress phases directly via our clinical portal app. Review the structural milestone journey from your initial 3D digital scan to the final reveal day.
+                    </p>
+                </div>
+
+                <!-- Timeline Interactive Module -->
+                <div class="lg:col-span-7 glass-card p-8 rounded-3xl border border-white/10 relative">
+                    <div class="space-y-8 relative border-l border-white/10 pl-8 ml-4">
+                        <!-- Step 1 -->
+                        <div class="relative cursor-pointer group" onclick="highlightTimelineStep(1)">
+                            <div class="absolute -left-[41px] top-1 w-6 h-6 rounded-full bg-brand-cyan flex items-center justify-center text-[10px] text-brand-obsidian font-bold t-step-dot" id="t-dot-1">1</div>
+                            <h4 class="text-base font-bold text-brand-cyan transition-colors" id="t-title-1">3D Scanner Virtual Imaging</h4>
+                            <p class="text-xs text-slate-400 mt-1">We create a computerized 50-micron accurate blueprint profile of your teeth within 10 minutes without physical molds.</p>
+                        </div>
+                        <!-- Step 2 -->
+                        <div class="relative cursor-pointer group" onclick="highlightTimelineStep(2)">
+                            <div class="absolute -left-[41px] top-1 w-6 h-6 rounded-full bg-slate-800 flex items-center justify-center text-[10px] text-slate-400 font-bold t-step-dot" id="t-dot-2">2</div>
+                            <h4 class="text-base font-bold text-slate-300 transition-colors" id="t-title-2">Custom Aligner Generation</h4>
+                            <p class="text-xs text-slate-400 mt-1">Your exact diagnostic sets are created using clear, medical-grade materials designed for daily wear.</p>
+                        </div>
+                        <!-- Step 3 -->
+                        <div class="relative cursor-pointer group" onclick="highlightTimelineStep(3)">
+                            <div class="absolute -left-[41px] top-1 w-6 h-6 rounded-full bg-slate-800 flex items-center justify-center text-[10px] text-slate-400 font-bold t-step-dot" id="t-dot-3">3</div>
+                            <h4 class="text-base font-bold text-slate-300 transition-colors" id="t-title-3">Accelerated Progress Review</h4>
+                            <p class="text-xs text-slate-400 mt-1">Short, 15-minute diagnostic scans scheduled every 6 weeks keep alignment precision moving smoothly.</p>
+                        </div>
+                        <!-- Step 4 -->
+                        <div class="relative cursor-pointer group" onclick="highlightTimelineStep(4)">
+                            <div class="absolute -left-[41px] top-1 w-6 h-6 rounded-full bg-slate-800 flex items-center justify-center text-[10px] text-slate-400 font-bold t-step-dot" id="t-dot-4">4</div>
+                            <h4 class="text-base font-bold text-slate-300 transition-colors" id="t-title-4">Reveal & Retainer Maintenance</h4>
+                            <p class="text-xs text-slate-400 mt-1">Receive customized overnight retainer accessories to guarantee structural permanence for decades.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TIKTOK-STYLE VERTICAL SMILE FEED -->
+        <section class="py-24 max-w-7xl mx-auto px-4 space-y-12">
+            <div class="text-center max-w-3xl mx-auto space-y-4">
+                <span class="text-xs text-brand-cyan font-bold tracking-widest uppercase"><i class="fa-solid fa-play"></i> social proof stream</span>
+                <h2 class="text-3xl md:text-5xl font-display font-extrabold">The Real Smile Feed</h2>
+                <p class="text-slate-400">Authentic video logs, aligner reviews, and reactions directly from our patient community network.</p>
+            </div>
+
+            <!-- Vertical feed display mockups -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Video 1 -->
+                <div class="rounded-3xl overflow-hidden glass-card aspect-[9/16] relative group border border-white/5 flex flex-col justify-end p-4">
+                    <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&q=80&w=400" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform" alt="Video cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+                    
+                    <div class="relative space-y-2">
+                        <span class="text-[9px] bg-brand-cyan/20 text-brand-cyan border border-brand-cyan/30 px-2 py-0.5 rounded font-bold uppercase tracking-wider">Braces Removal React</span>
+                        <p class="text-xs text-white font-bold leading-normal">"Zero metal brackets in my mouth now! Speechless."</p>
+                        <div class="flex items-center gap-2">
+                            <span class="w-6 h-6 rounded-full bg-brand-cyan flex items-center justify-center text-[10px] text-brand-obsidian font-bold">K</span>
+                            <span class="text-[10px] text-slate-300 font-semibold">@katie.smiles</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 2 -->
+                <div class="rounded-3xl overflow-hidden glass-card aspect-[9/16] relative group border border-white/5 flex flex-col justify-end p-4">
+                    <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80&w=400" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform" alt="Video cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+                    
+                    <div class="relative space-y-2">
+                        <span class="text-[9px] bg-brand-teal/20 text-brand-teal border border-brand-teal/30 px-2 py-0.5 rounded font-bold uppercase tracking-wider">Invisalign Journey</span>
+                        <p class="text-xs text-white font-bold leading-normal">"My weekly treatment progress logs under 30 seconds."</p>
+                        <div class="flex items-center gap-2">
+                            <span class="w-6 h-6 rounded-full bg-brand-teal flex items-center justify-center text-[10px] text-brand-obsidian font-bold">M</span>
+                            <span class="text-[10px] text-slate-300 font-semibold">@marcus.aligns</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 3 -->
+                <div class="rounded-3xl overflow-hidden glass-card aspect-[9/16] relative group border border-white/5 flex flex-col justify-end p-4">
+                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=400" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform" alt="Video cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+                    
+                    <div class="relative space-y-2">
+                        <span class="text-[9px] bg-brand-gold/20 text-brand-gold border border-brand-gold/30 px-2 py-0.5 rounded font-bold uppercase tracking-wider">Unboxing Custom Aligners</span>
+                        <p class="text-xs text-white font-bold leading-normal">"Box aesthetic is pure Apple-level minimalism."</p>
+                        <div class="flex items-center gap-2">
+                            <span class="w-6 h-6 rounded-full bg-brand-gold flex items-center justify-center text-[10px] text-brand-obsidian font-bold">S</span>
+                            <span class="text-[10px] text-slate-300 font-semibold">@stacey_vlogs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 4 -->
+                <div class="rounded-3xl overflow-hidden glass-card aspect-[9/16] relative group border border-white/5 flex flex-col justify-end p-4">
+                    <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=400" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform" alt="Video cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+                    
+                    <div class="relative space-y-2">
+                        <span class="text-[9px] bg-brand-cyan/20 text-brand-cyan border border-brand-cyan/30 px-2 py-0.5 rounded font-bold uppercase tracking-wider">Behind The Scenes</span>
+                        <p class="text-xs text-white font-bold leading-normal">"Evaluating custom 3D models of patient arches today!"</p>
+                        <div class="flex items-center gap-2">
+                            <span class="w-6 h-6 rounded-full bg-brand-cyan flex items-center justify-center text-[10px] text-brand-obsidian font-bold">D</span>
+                            <span class="text-[10px] text-slate-300 font-semibold">@doctor.aura</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRICING TRANSPARENCY & ACCORDION COST ESTIMATOR -->
+        <section id="pricing" class="py-24 max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-5 space-y-6">
+                <span class="text-xs text-brand-cyan font-bold tracking-widest uppercase"><i class="fa-solid fa-calculator"></i> Fair Price Guarantee</span>
+                <h2 class="text-3xl md:text-5xl font-display font-extrabold leading-tight">Zero-Surprise Clear Pricing</h2>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    We accept major US dental PPO networks to coordinate maximum orthodontic copay deductions. Get direct, simple, monthly payment options without surprises.
+                </p>
+                <div class="space-y-4 text-xs font-semibold">
+                    <div class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-brand-cyan"></i> No interest financing via CareCredit</div>
+                    <div class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-brand-cyan"></i> Complete annual scans included free</div>
+                    <div class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-brand-cyan"></i> Retainers provided with all structural cases</div>
+                </div>
+            </div>
+
+            <!-- Calculator UI Interface Card -->
+            <div class="lg:col-span-7 glass-card p-8 rounded-3xl border border-white/10 space-y-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="space-y-2">
+                        <label class="text-xs text-slate-300 font-bold uppercase tracking-wider block">Target Service</label>
+                        <select id="calc-plan" onchange="updateTreatmentPricing()" class="w-full bg-slate-900 border border-white/10 text-xs p-3.5 rounded-xl focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan outline-none font-bold">
+                            <option value="invisalign" data-price="3800" selected>Invisalign Clear Aligners ($3,800)</option>
+                            <option value="braces" data-price="4500">Modern Ceramic/Metal Braces ($4,500)</option>
+                            <option value="lingual" data-price="5500">Lingual Hidden Braces ($5,500)</option>
+                        </select>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label class="text-xs text-slate-300 font-bold uppercase tracking-wider block">PPO Insurance Tier</label>
+                        <select id="calc-ins" onchange="updateTreatmentPricing()" class="w-full bg-slate-900 border border-white/10 text-xs p-3.5 rounded-xl focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan outline-none font-bold">
+                            <option value="none" selected>Out-of-Pocket (No insurance)</option>
+                            <option value="standard">Standard PPO Coverage (Est 30% discount)</option>
+                            <option value="preferred">Premium Preferred PPO (Est 50% discount)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="space-y-2">
+                    <label class="text-xs text-slate-300 font-bold uppercase tracking-wider block">Preferred Monthly Term</label>
+                    <div class="grid grid-cols-3 gap-3">
+                        <button onclick="setCalcTermMonths(12, this)" class="p-3.5 rounded-xl border border-brand-cyan bg-white/5 text-[10px] font-bold uppercase text-center tracking-wider calc-term-selector">
+                            12 Months (0% APR)
+                        </button>
+                        <button onclick="setCalcTermMonths(24, this)" class="p-3.5 rounded-xl border border-white/10 hover:border-brand-cyan text-[10px] font-bold uppercase text-center tracking-wider calc-term-selector">
+                            24 Months (0% APR)
+                        </button>
+                        <button onclick="setCalcTermMonths(36, this)" class="p-3.5 rounded-xl border border-white/10 hover:border-brand-cyan text-[10px] font-bold uppercase text-center tracking-wider calc-term-selector">
+                            36 Months (Regular APR)
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Live Out-of-Pocket Breakdown Sheet -->
+                <div class="p-6 rounded-2xl bg-slate-950/60 border border-white/5 space-y-4">
+                    <div class="flex justify-between items-center text-xs">
+                        <span class="text-slate-400">Baseline Cost:</span>
+                        <span id="price-out-base" class="font-bold text-slate-200">$3,800</span>
+                    </div>
+                    <div class="flex justify-between items-center text-xs text-brand-teal font-bold">
+                        <span>PPO Insurance Savings:</span>
+                        <span id="price-out-savings">-$0</span>
+                    </div>
+                    <hr class="border-white/5">
+                    <div class="flex justify-between items-center">
+                        <span class="text-xs font-bold uppercase tracking-wider text-slate-300">Total Out-of-Pocket:</span>
+                        <span id="price-out-total" class="text-2xl font-display font-extrabold text-slate-100">$3,800</span>
+                    </div>
+                    <div class="flex justify-between items-center bg-brand-cyan/10 p-4 rounded-xl border border-brand-cyan/20">
+                        <div>
+                            <span class="text-[9px] text-brand-cyan uppercase tracking-widest block font-bold">Monthly Care Plan</span>
+                            <span class="text-[10px] text-slate-300">With 0% interest terms</span>
+                        </div>
+                        <div class="text-right">
+                            <span id="price-out-monthly" class="text-xl font-display font-bold text-brand-cyan">$316.67 / mo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex gap-4">
+                    <a href="#booking" class="flex-1 py-4 text-center rounded-xl bg-brand-cyan text-brand-obsidian font-bold text-xs uppercase tracking-widest glow-cyan">Apply for Pre-Approval</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FRICTIONLESS ONLINE BOOKING CALENDAR -->
+        <section id="booking" class="py-24 bg-slate-950/40 border-y border-white/5">
+            <div class="max-w-4xl mx-auto px-4 space-y-12">
+                <div class="text-center space-y-4">
+                    <span class="text-xs text-brand-cyan font-bold tracking-widest uppercase"><i class="fa-solid fa-calendar"></i> Spot Booking</span>
+                    <h2 class="text-3xl md:text-5xl font-display font-extrabold">Register Your Virtual Assessment</h2>
+                    <p class="text-slate-400 text-sm max-w-md mx-auto">Skip phone lines. Schedule your live structural consult with our clinical designers instantly.</p>
+                </div>
+
+                <form onsubmit="handleConsultRegistration(event)" class="glass-card p-8 rounded-3xl border border-white/10 space-y-6" id="consult-form">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="text-xs text-slate-300 font-bold uppercase tracking-wider block">First & Last Name</label>
+                            <input type="text" required placeholder="Alexander Vance" class="w-full bg-slate-900 border border-white/10 text-xs p-3.5 rounded-xl focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan outline-none font-bold">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-xs text-slate-300 font-bold uppercase tracking-wider block">Email Address</label>
+                            <input type="email" required placeholder="alex@domain.com" class="w-full bg-slate-900 border border-white/10 text-xs p-3.5 rounded-xl focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan outline-none font-bold">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-xs text-slate-300 font-bold uppercase tracking-wider block">Phone Number (For reminders)</label>
+                            <input type="tel" required placeholder="(555) 123-4567" class="w-full bg-slate-900 border border-white/10 text-xs p-3.5 rounded-xl focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan outline-none font-bold font-mono">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-xs text-slate-300 font-bold uppercase tracking-wider block">Target Service Category</label>
+                            <select class="w-full bg-slate-900 border border-white/10 text-xs p-3.5 rounded-xl focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan outline-none font-bold">
+                                <option>Invisalign® Clear Aligners</option>
+                                <option>Modern Metal/Ceramic Braces</option>
+                                <option>Lingual (Behind-Teeth) Custom Braces</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="w-full py-4 bg-gradient-to-r from-brand-cyan to-brand-teal text-brand-obsidian font-bold text-xs uppercase tracking-wider rounded-xl hover:scale-[1.01] transition-transform glow-cyan">
+                        Lock Consultation
+                    </button>
+                </form>
+
+                <!-- Success State (Hidden Initially) -->
+                <div id="booking-success" class="hidden glass-card p-12 rounded-3xl border border-emerald-500/20 text-center space-y-4">
+                    <i class="fa-solid fa-circle-check text-5xl text-emerald-400"></i>
+                    <h3 class="text-2xl font-display font-bold">Consultation Slot Locked</h3>
+                    <p class="text-xs text-slate-400 max-w-sm mx-auto">We sent details to your registered address along with a custom instructions checklist. See you inside.</p>
+                    <button onclick="resetRegistrationForm()" class="px-6 py-2.5 bg-white/5 hover:bg-white/10 rounded-lg text-xs font-bold uppercase tracking-wider">Book New Spot</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FLOATING CHATBOT ENGINE -->
+    <div id="chatbot-wrapper" class="fixed bottom-6 right-6 z-50 flex flex-col items-end">
+        <div id="chatbot-box" class="w-80 md:w-96 glass-card border border-white/10 rounded-3xl shadow-2xl mb-3 hidden flex-col overflow-hidden">
+            <!-- Header -->
+            <div class="bg-brand-cyan p-4 text-brand-obsidian flex justify-between items-center">
+                <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <span class="font-bold text-xs">AURA Ortho Coordinator</span>
+                </div>
+                <button onclick="toggleOrthoChat()" class="hover:opacity-70"><i class="fa-solid fa-chevron-down"></i></button>
+            </div>
+
+            <!-- Messages Window -->
+            <div id="chatbot-messages" class="h-64 p-4 overflow-y-auto space-y-3 text-xs flex flex-col scroll-smooth">
+                <div class="bg-white/5 border border-white/5 p-3 rounded-2xl max-w-[85%] self-start text-slate-300">
+                    Welcome. Ask about treatment speeds, Invisalign options, insurance, or general costs.
+                </div>
+            </div>
+
+            <!-- TextInput Area -->
+            <form onsubmit="handleOrthoChatSubmit(event)" class="p-3 border-t border-white/5 flex gap-2 bg-slate-950">
+                <input id="chatbot-input" type="text" placeholder="Ask details..." class="flex-1 bg-slate-900 border border-white/10 text-xs p-3 rounded-xl outline-none focus:border-brand-cyan font-bold">
+                <button type="submit" class="bg-brand-cyan text-brand-obsidian p-3 rounded-xl"><i class="fa-solid fa-paper-plane"></i></button>
+            </form>
+        </div>
+
+        <!-- Floating action button -->
+        <button onclick="toggleOrthoChat()" class="w-14 h-14 rounded-full bg-brand-cyan text-brand-obsidian flex items-center justify-center shadow-lg hover:scale-105 transition-transform">
+            <i class="fa-solid fa-robot text-xl"></i>
+        </button>
+    </div>
+
+    <!-- MAIN FOOTER -->
+    <footer class="bg-slate-950 border-t border-white/5 py-12 text-slate-400 text-xs text-center space-y-6">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-left items-center">
+            <div class="space-y-2">
+                <span class="text-xl font-display font-extrabold text-slate-100">AURA ORTHO</span>
+                <p class="text-[10px] leading-relaxed max-w-xs">
+                    Reconstructing dental alignment with safe biological scans, 3D printing paths, and zero-needle sedation processes.
+                </p>
+            </div>
+            <div class="space-y-1">
+                <span class="text-xs font-bold text-slate-200 block uppercase tracking-wider">USA Clinical Support</span>
+                <p>Hotline: <a href="tel:18005552026" class="text-brand-cyan">1-800-555-2026</a></p>
+                <p>Inquiries: hello@auraortho.ai</p>
+            </div>
+            <div class="flex gap-4 md:justify-end">
+                <a href="#" class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-cyan hover:text-brand-obsidian transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-cyan hover:text-brand-obsidian transition-colors"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#" class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-cyan hover:text-brand-obsidian transition-colors"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+        <hr class="border-white/5 max-w-7xl mx-auto">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] text-slate-500">
+            <p>© 2026 Aura Ortho Inc. USA Clinical alignment options are performed by verified, certified orthodontic designers.</p>
+            <div class="flex gap-4">
+                <a href="#" class="hover:text-slate-300">Privacy Policy</a>
+                <a href="#" class="hover:text-slate-300">HIPAA Compliance</a>
+                <a href="#" class="hover:text-slate-300">Terms of Use</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE SCRIPTS -->
+    <script>
+        // DARK/LIGHT THEME CONTROLS
+        const themeToggle = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+
+        themeToggle.addEventListener('click', () => {
+            if (htmlElement.classList.contains('dark')) {
+                htmlElement.classList.remove('dark');
+                htmlElement.classList.add('light');
+                localStorage.setItem('theme', 'light');
+            } else {
+                htmlElement.classList.remove('light');
+                htmlElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+
+        if (localStorage.getItem('theme') === 'light') {
+            htmlElement.classList.remove('dark');
+            htmlElement.classList.add('light');
+        }
+
+        // MOBILE NAVIGATION
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // HERO TOOTH REALIGNMENT SIMULATOR INTERACTION
+        const alignmentSlider = document.getElementById('alignment-slider');
+        const morphingTooth = document.getElementById('morphing-tooth');
+        const toothAlignmentPercent = document.getElementById('tooth-alignment-percent');
+        const alignmentIndexLabel = document.getElementById('alignment-index-label');
+
+        alignmentSlider.addEventListener('input', (e) => {
+            const val = parseInt(e.target.value);
+            
+            // Dynamic path values showing physical movement
+            const startPath = "M30 40 C30 25, 40 20, 50 25 C60 20, 70 25, 70 40 C70 55, 65 75, 50 85 C35 75, 30 55, 30 40 Z";
+            const endPath = "M33 40 C33 28, 42 24, 50 25 C58 24, 67 28, 67 40 C67 52, 62 70, 50 80 C38 70, 33 52, 33 40 Z";
+            
+            // Smoothly morph path using SVG path approximations based on slider percentage
+            if (val > 50) {
+                morphingTooth.setAttribute('d', endPath);
+            } else {
+                morphingTooth.setAttribute('d', startPath);
+            }
+
+            const deviationValue = (18.2 * (1 - val / 100)).toFixed(1);
+            toothAlignmentPercent.textContent = `Deviation: ${deviationValue}mm`;
+            alignmentIndexLabel.textContent = `${val}% Correction`;
+        });
+
+        // BEFORE-AFTER HORIZONTAL DRAG COMPARISONS
+        document.querySelectorAll('.before-after-slider').forEach(slider => {
+            let isDragging = false;
+            
+            const handleSliderDrag = (clientX) => {
+                const rect = slider.getBoundingClientRect();
+                let percentage = ((clientX - rect.left) / rect.width) * 100;
+                if (percentage < 0) percentage = 0;
+                if (percentage > 100) percentage = 100;
+
+                slider.querySelector('.after-image-overlay').style.width = `${percentage}%`;
+                slider.querySelector('.slider-bar').style.left = `${percentage}%`;
+            };
+
+            slider.addEventListener('mousedown', () => isDragging = true);
+            window.addEventListener('mouseup', () => isDragging = false);
+            slider.addEventListener('mousemove', (e) => {
+                if (isDragging) handleSliderDrag(e.clientX);
+            });
+
+            slider.addEventListener('touchstart', () => isDragging = true);
+            window.addEventListener('touchend', () => isDragging = false);
+            slider.addEventListener('touchmove', (e) => {
+                if (isDragging) handleSliderDrag(e.touches[0].clientX);
+            });
+        });
+
+        // STATIC LIVE COUNTERS
+        const statsSection = document.getElementById('live-stats');
+        const countElements = [
+            document.getElementById('stat-improved'),
+            document.getElementById('stat-cases'),
+            document.getElementById('stat-years'),
+            document.getElementById('stat-reviews')
+        ];
+        let countersStarted = false;
+
+        function startCounters() {
+            countElements.forEach(elem => {
+                const target = parseInt(elem.getAttribute('data-target'));
+                let current = 0;
+                const increment = Math.ceil(target / 80);
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    elem.textContent = current.toLocaleString() + (elem.id === 'stat-reviews' ? '+' : '');
+                }, 20);
+            });
+        }
+
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !countersStarted) {
+                    countersStarted = true;
+                    startCounters();
+                }
+            });
+        }, { threshold: 0.5 });
+        statsObserver.observe(statsSection);
+
+        // AI SELFIE SCANNER FLOW MOCK
+        function startSelfieScanSim() {
+            document.getElementById('scan-view-prompt').classList.add('hidden');
+            document.getElementById('scan-view-processing').classList.remove('hidden');
+            document.getElementById('scan-laser-line').classList.remove('hidden');
+
+            setTimeout(() => {
+                document.getElementById('scan-view-processing').classList.add('hidden');
+                document.getElementById('scan-laser-line').classList.add('hidden');
+                document.getElementById('scan-view-report').classList.remove('hidden');
+            }, 3000);
+        }
+
+        function resetSelfieScanSim() {
+            document.getElementById('scan-view-report').classList.add('hidden');
+            document.getElementById('scan-view-prompt').classList.remove('hidden');
+        }
+
+        // SCROLL TREATMENTS HORIZONTAL TRACK
+        function scrollTreatments(direction) {
+            const track = document.getElementById('treatment-track');
+            track.scrollBy({ left: direction * 320, behavior: 'smooth' });
+        }
+
+        // CLINICAL TREATMENTS METADATA
+        const treatmentData = {
+            invisalign: {
+                title: "Invisalign® Clear Aligners",
+                category: "Clear Orthodontics",
+                duration: "6 - 12 Months",
+                cost: "$99 / mo",
+                desc: "Our custom crystal-clear trays fit your teeth snuggly to execute slow, precise realignments without brackets or dietary restrictions.",
+                candidates: [
+                    "Professionals demanding completely invisible cosmetic tools",
+                    "Teens wanting comfortable solutions without physical wires",
+                    "Individuals desiring predictable computerized 3D treatment steps"
+                ]
+            },
+            metal: {
+                title: "Modern Minimalist Braces",
+                category: "Classic Orthodontics",
+                duration: "12 - 18 Months",
+                cost: "$79 / mo",
+                desc: "Optimized micro-sized metal brackets offer extreme durability and precise physical alignment on severe crowded cases.",
+                candidates: [
+                    "Complex orthopedic skeletal alignments",
+                    "Individuals needing rapid corrective root adjustments",
+                    "Budget-conscious families wanting highly durable components"
+                ]
+            },
+            lingual: {
+                title: "Hidden Behind-Teeth Braces",
+                category: "Cosmetic Orthodontics",
+                duration: "10 - 15 Months",
+                cost: "$129 / mo",
+                desc: "Placed completely on the inside face of the dental arch, ensuring zero exterior visibility throughout the plan.",
+                candidates: [
+                    "Adult executives wanting maximum professional discretion",
+                    "Active patients worried about external dental impacts during sports",
+                    "Complex orthodontic cases not matching aligner criteria"
+                ]
+            },
+            ceramic: {
+                title: "Aesthetic Ceramic Braces",
+                category: "Low-Visibility Orthodontics",
+                duration: "12 - 16 Months",
+                cost: "$89 / mo",
+                desc: "Tooth-colored translucent ceramic materials ensure your brackets remain subtle while retaining high continuous tensile strength.",
+                candidates: [
+                    "Aesthetic-conscious teenagers",
+                    "Adult patients desiring physical brackets with low visible contrast",
+                    "Moderate alignment cases needing intermediate solutions"
+                ]
+            }
+        };
+
+        // DYNAMIC TREATMENTS OVERLAY
+        function openTreatmentModal(key) {
+            const data = treatmentData[key];
+            if (!data) return;
+
+            document.getElementById('t-modal-title').textContent = data.title;
+            document.getElementById('t-modal-category').textContent = data.category;
+            document.getElementById('t-modal-duration').textContent = data.duration;
+            document.getElementById('t-modal-cost').textContent = data.cost;
+            document.getElementById('t-modal-desc').textContent = data.desc;
+
+            const candidatesList = document.getElementById('t-modal-candidates');
+            candidatesList.innerHTML = '';
+            data.candidates.forEach(cand => {
+                const li = document.createElement('li');
+                li.textContent = cand;
+                candidatesList.appendChild(li);
+            });
+
+            const modal = document.getElementById('treatment-modal');
+            modal.classList.remove('hidden');
+            setTimeout(() => modal.classList.remove('opacity-0'), 10);
+        }
+
+        function closeTreatmentModal() {
+            const modal = document.getElementById('treatment-modal');
+            modal.classList.add('opacity-0');
+            setTimeout(() => modal.classList.add('hidden'), 300);
+        }
+
+        // GLOW-UP CALCULATOR METRICS CONTROL
+        let glowData = {};
+        function setGlowMetric(key, value, currentStep) {
+            glowData[key] = value;
+            document.getElementById(`glow-step-${currentStep}`).classList.add('hidden');
+            
+            if (currentStep < 3) {
+                document.getElementById(`glow-step-${currentStep + 1}`).classList.remove('hidden');
+            } else {
+                calculateGlowUpReport();
+            }
+        }
+
+        function calculateGlowUpReport() {
+            const potentialOutput = document.getElementById('glow-out-potential');
+            const recoOutput = document.getElementById('glow-out-reco');
+
+            if (glowData.concern === 'crowding' && glowData.lifestyle === 'discreet') {
+                recoOutput.textContent = "Invisalign® SmartTrack Plan";
+                potentialOutput.textContent = "96% Symmetry Potential";
+            } else if (glowData.concern === 'bite') {
+                recoOutput.textContent = "Aesthetic Ceramic Braces Plan";
+                potentialOutput.textContent = "98% Symmetry Potential";
+            } else {
+                recoOutput.textContent = "Invisalign Express Treatment";
+                potentialOutput.textContent = "94% Symmetry Potential";
+            }
+
+            document.getElementById('glow-results').classList.remove('hidden');
+        }
+
+        function resetGlowCalc() {
+            glowData = {};
+            document.getElementById('glow-results').classList.add('hidden');
+            document.getElementById('glow-step-1').classList.remove('hidden');
+        }
+
+        // CHRONOLOGY TIMELINE HIGHLIGHT CONTROL
+        function highlightTimelineStep(stepNum) {
+            document.querySelectorAll('.t-step-dot').forEach(dot => {
+                dot.className = "absolute -left-[41px] top-1 w-6 h-6 rounded-full bg-slate-800 flex items-center justify-center text-[10px] text-slate-400 font-bold t-step-dot";
+            });
+            document.getElementById(`t-dot-${stepNum}`).className = "absolute -left-[41px] top-1 w-6 h-6 rounded-full bg-brand-cyan flex items-center justify-center text-[10px] text-brand-obsidian font-bold t-step-dot";
+        }
+
+        // TRANSPARENT PRICING CALCULATOR ENGINE
+        let activeTermMonths = 12;
+
+        function setCalcTermMonths(months, element) {
+            document.querySelectorAll('.calc-term-selector').forEach(sel => {
+                sel.classList.remove('border-brand-cyan');
+                sel.classList.add('border-white/10');
+            });
+            element.classList.remove('border-white/10');
+            element.classList.add('border-brand-cyan');
+            activeTermMonths = months;
+            updateTreatmentPricing();
+        }
+
+        function updateTreatmentPricing() {
+            const planSelect = document.getElementById('calc-plan');
+            const selectedOpt = planSelect.options[planSelect.selectedIndex];
+            const basePrice = parseFloat(selectedOpt.getAttribute('data-price'));
+
+            const insurance = document.getElementById('calc-ins').value;
+            let insuranceSavings = 0;
+
+            if (insurance === 'standard') {
+                insuranceSavings = basePrice * 0.3;
+            } else if (insurance === 'preferred') {
+                insuranceSavings = basePrice * 0.5;
+            }
+
+            const totalOutOfPocket = basePrice - insuranceSavings;
+            const monthlyValue = totalOutOfPocket / activeTermMonths;
+
+            document.getElementById('price-out-base').textContent = `$${basePrice.toLocaleString()}`;
+            document.getElementById('price-out-savings').textContent = `-$${insuranceSavings.toLocaleString()}`;
+            document.getElementById('price-out-total').textContent = `$${totalOutOfPocket.toLocaleString()}`;
+            document.getElementById('price-out-monthly').textContent = `$${monthlyValue.toFixed(2)} / mo`;
+        }
+
+        // Initialize calculator pricing values
+        updateTreatmentPricing();
+
+        // REGISTRATION FORM SUBMISSION
+        function handleConsultRegistration(e) {
+            e.preventDefault();
+            document.getElementById('consult-form').classList.add('hidden');
+            document.getElementById('booking-success').classList.remove('hidden');
+        }
+
+        function resetRegistrationForm() {
+            document.getElementById('consult-form').reset();
+            document.getElementById('booking-success').classList.add('hidden');
+            document.getElementById('consult-form').classList.remove('hidden');
+        }
+
+        // FLOATING CHATBOT CONTROLS
+        function toggleOrthoChat() {
+            const chatBox = document.getElementById('chatbot-box');
+            chatBox.classList.toggle('hidden');
+            if (!chatBox.classList.contains('hidden')) {
+                chatBox.classList.add('flex');
+            }
+        }
+
+        function handleOrthoChatSubmit(e) {
+            e.preventDefault();
+            const input = document.getElementById('chatbot-input');
+            const val = input.value.trim();
+            if (!val) return;
+
+            const msgs = document.getElementById('chatbot-messages');
+            
+            // Render user bubble
+            const userBubble = document.createElement('div');
+            userBubble.className = "bg-brand-cyan/25 border border-brand-cyan/30 p-3 rounded-2xl max-w-[85%] self-end text-slate-100 text-right";
+            userBubble.textContent = val;
+            msgs.appendChild(userBubble);
+            input.value = '';
+
+            setTimeout(() => {
+                const responseBubble = document.createElement('div');
+                responseBubble.className = "bg-white/5 border border-white/5 p-3 rounded-2xl max-w-[85%] self-start text-slate-300";
+                
+                const query = val.toLowerCase();
+                if (query.includes('cost') || query.includes('price') || query.includes('pay')) {
+                    responseBubble.innerHTML = "Our clear aligner treatments average around $3,800. Try our customized <a href='#pricing' class='text-brand-cyan underline'>Pricing Calculator</a> for specialized insurance estimations.";
+                } else if (query.includes('pain') || query.includes('hurt')) {
+                    responseBubble.textContent = "We implement state-of-the-art biological adjustments. Pain margins are negligible, avoiding traditional physical bracket adjustments.";
+                } else if (query.includes('invisalign') || query.includes('align')) {
+                    responseBubble.textContent = "Invisalign utilizes computer-designed transparent alignments. You can preview your simulated tooth transformation directly on our home panel.";
+                } else {
+                    responseBubble.textContent = "I have recorded your question. A clinical coordinator will follow up on this query during standard office confirmation hours.";
+                }
+
+                msgs.appendChild(responseBubble);
+                msgs.scrollTop = msgs.scrollHeight;
+            }, 800);
+        }
+    </script>
+</body>
+</html>
