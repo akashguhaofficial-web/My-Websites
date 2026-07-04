@@ -1,0 +1,1665 @@
+```html
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEOSMILE™ AI | Futuristic Orthodontic Smile Transformation Platform</title>
+    <meta name="description" content="Experience the future of orthodontics. Get your personalized, AI-driven smile preview, custom Invisalign & braces plans, and premium care under Board-Certified specialists.">
+    
+    <!-- Google Fonts & Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            darkBg: '#090B11',
+                            darkCard: 'rgba(17, 22, 34, 0.75)',
+                            lightBg: '#F9FAFC',
+                            lightCard: 'rgba(255, 255, 255, 0.8)',
+                            accentViolet: '#8B5CF6',
+                            accentPink: '#EC4899',
+                            gold: '#D97706'
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Structured SEO Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Dentist",
+      "name": "NEOSMILE™ AI Orthodontics",
+      "image": "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800",
+      "telephone": "+1-800-555-0199",
+      "email": "hello@neosmileai.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "500 Innovation Way, Suite 100",
+        "addressLocality": "Silicon Valley",
+        "addressRegion": "CA",
+        "postalCode": "94025",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 37.4529,
+        "longitude": -122.1817
+      },
+      "url": "https://neosmileai.com",
+      "priceRange": "$$$$",
+      "rating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "1850"
+      }
+    }
+    </script>
+    <style>
+        .glass-panel {
+            backdrop-filter: blur(16px) saturate(180%);
+            -webkit-backdrop-filter: blur(16px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .light .glass-panel {
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        /* Hide scrollbars for dynamic horizontal elements */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-brand-darkBg text-slate-100 transition-colors duration-500 font-sans selection:bg-brand-accentViolet selection:text-white dark:bg-brand-darkBg light:bg-brand-lightBg light:text-slate-900">
+
+    <!-- TOP ANNOUNCEMENT BANNER -->
+    <div class="w-full bg-gradient-to-r from-brand-accentViolet via-brand-accentPink to-brand-accentViolet text-white text-xs md:text-sm font-semibold py-2.5 px-4 text-center tracking-wide flex items-center justify-center gap-2">
+        <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] bg-white/20 uppercase tracking-widest animate-pulse">Live</span>
+        <span>NEOSMILE™ AI Engine v4.2 Live: Experience 99.4% Accurate Visualizations Today.</span>
+    </div>
+
+    <!-- MAIN STICKY NAVIGATION -->
+    <nav class="sticky top-0 z-50 w-full glass-panel bg-brand-darkBg/75 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group focus:outline-none">
+                <div class="relative w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-accentViolet to-brand-accentPink p-[2px] flex items-center justify-center shadow-lg shadow-brand-accentViolet/20">
+                    <div class="w-full h-full bg-brand-darkBg rounded-[10px] flex items-center justify-center transition-colors group-hover:bg-transparent">
+                        <i data-lucide="sparkles" class="w-5 h-5 text-brand-accentViolet transition-colors group-hover:text-white"></i>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xl font-bold tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-100 to-slate-400 group-hover:to-brand-accentPink transition-all duration-300 dark:from-white dark:to-slate-400 light:from-slate-900 light:to-slate-700">NEOSMILE<span class="text-xs text-brand-accentViolet font-semibold ml-0.5">AI</span></span>
+                    <span class="text-[9px] tracking-widest text-slate-400 uppercase">Orthodontic Studio</span>
+                </div>
+            </a>
+
+            <!-- Desk Nav Options -->
+            <div class="hidden lg:flex items-center gap-8 text-sm font-medium tracking-wide">
+                <a href="#results" class="text-slate-300 hover:text-brand-accentViolet transition-colors dark:text-slate-300 light:text-slate-700 light:hover:text-brand-accentViolet">Transformations</a>
+                <a href="#meet" class="text-slate-300 hover:text-brand-accentViolet transition-colors dark:text-slate-300 light:text-slate-700 light:hover:text-brand-accentViolet">Our Orthodontist</a>
+                <a href="#treatments" class="text-slate-300 hover:text-brand-accentViolet transition-colors dark:text-slate-300 light:text-slate-700 light:hover:text-brand-accentViolet">Treatments</a>
+                <a href="#ai-tools" class="text-slate-300 hover:text-brand-accentViolet transition-colors dark:text-slate-300 light:text-slate-700 light:hover:text-brand-accentViolet">AI Predictor</a>
+                <a href="#pricing" class="text-slate-300 hover:text-brand-accentViolet transition-colors dark:text-slate-300 light:text-slate-700 light:hover:text-brand-accentViolet">Pricing</a>
+            </div>
+
+            <!-- Global Action Controls -->
+            <div class="flex items-center gap-4">
+                <!-- Theme Toggle Button -->
+                <button onclick="toggleTheme()" class="p-2.5 rounded-full glass-panel text-slate-300 hover:text-brand-accentViolet transition-all duration-300 dark:text-slate-300 light:text-slate-700" aria-label="Toggle Light/Dark Theme">
+                    <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+                    <i data-lucide="moon" class="w-5 h-5 dark:hidden"></i>
+                </button>
+
+                <!-- Responsive Quick-Book CTAs -->
+                <a href="#booking" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-accentViolet to-brand-accentPink text-white font-semibold text-sm transition-all duration-300 hover:scale-102 hover:shadow-lg hover:shadow-brand-accentViolet/20">
+                    Book Free Consult
+                </a>
+
+                <!-- Mobile Navigation Toggle -->
+                <button onclick="toggleMobileMenu()" class="lg:hidden p-2.5 rounded-xl glass-panel text-slate-300 hover:text-brand-accentViolet transition-colors" aria-label="Toggle Navigation Menu">
+                    <i data-lucide="menu" id="menu-icon-burger" class="w-6 h-6"></i>
+                    <i data-lucide="x" id="menu-icon-close" class="w-6 h-6 hidden"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Menu Panel -->
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-white/5 dark:border-white/5 light:border-slate-200/50 glass-panel bg-brand-darkBg/95 py-6 px-4 space-y-4 absolute top-20 left-0 w-full z-40 transition-all duration-300 animate-fadeIn">
+            <a href="#results" onclick="toggleMobileMenu()" class="block text-lg py-2 border-b border-white/5 dark:border-white/5 light:border-slate-200/50">Transformations</a>
+            <a href="#meet" onclick="toggleMobileMenu()" class="block text-lg py-2 border-b border-white/5 dark:border-white/5 light:border-slate-200/50">Our Orthodontist</a>
+            <a href="#treatments" onclick="toggleMobileMenu()" class="block text-lg py-2 border-b border-white/5 dark:border-white/5 light:border-slate-200/50">Treatments</a>
+            <a href="#ai-tools" onclick="toggleMobileMenu()" class="block text-lg py-2 border-b border-white/5 dark:border-white/5 light:border-slate-200/50">AI Predictor</a>
+            <a href="#pricing" onclick="toggleMobileMenu()" class="block text-lg py-2 border-b border-white/5 dark:border-white/5 light:border-slate-200/50">Pricing</a>
+            <div class="pt-4 flex flex-col gap-3">
+                <a href="#ai-tools" onclick="toggleMobileMenu()" class="w-full py-3 rounded-xl glass-panel text-center text-sm font-semibold">Try Smile Simulator</a>
+                <a href="#booking" onclick="toggleMobileMenu()" class="w-full py-3 rounded-xl bg-gradient-to-r from-brand-accentViolet to-brand-accentPink text-center text-sm font-semibold text-white">Book Free Consultation</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- IMMERSIVE HERO SECTION -->
+    <section class="relative min-h-[calc(100vh-80px)] overflow-hidden flex items-center py-16 px-4 sm:px-6 lg:px-8">
+        <!-- Ambient Radial Glow Backgrounds -->
+        <div class="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-accentViolet/25 rounded-full blur-[120px] pointer-events-none animate-pulse-slow"></div>
+        <div class="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 w-[450px] h-[450px] bg-brand-accentPink/15 rounded-full blur-[150px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+            <!-- Left Info Column -->
+            <div class="lg:col-span-7 flex flex-col space-y-6 text-center lg:text-left">
+                <!-- Premium Micro Badge -->
+                <div class="inline-flex items-center gap-2 self-center lg:self-start px-3 py-1.5 rounded-full glass-panel bg-white/5 dark:bg-white/5 light:bg-slate-200/30">
+                    <span class="w-2.5 h-2.5 rounded-full bg-brand-accentPink animate-ping"></span>
+                    <span class="text-xs font-semibold tracking-wider text-slate-300 dark:text-slate-300 light:text-slate-700">EXPERIENCE THE FUTURE OF CLINICAL ORTHODONTICS</span>
+                </div>
+
+                <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight leading-[1.05]">
+                    Your Future <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-accentViolet via-brand-accentPink to-brand-accentViolet">Smile</span> Starts Today.
+                </h1>
+
+                <p class="text-base sm:text-lg md:text-xl text-slate-300 max-w-2xl mx-auto lg:mx-0 dark:text-slate-300 light:text-slate-600 font-light leading-relaxed">
+                    Advanced Orthodontics, Invisalign & Braces Designed for True Confidence. Powered by precision clinical robotics and AI smile design protocols.
+                </p>
+
+                <!-- Dual Action CTAs -->
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                    <a href="#booking" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-brand-accentViolet via-purple-600 to-brand-accentPink text-white font-bold tracking-wide shadow-xl shadow-brand-accentViolet/20 hover:scale-102 hover:shadow-2xl hover:shadow-brand-accentViolet/30 transition-all duration-300 text-center">
+                        Book Free Consultation
+                    </a>
+                    <a href="#ai-tools" class="w-full sm:w-auto px-8 py-4 rounded-xl glass-panel text-slate-200 font-bold tracking-wide hover:bg-white/10 dark:text-slate-200 light:text-slate-800 light:hover:bg-slate-100 transition-all duration-300 text-center flex items-center justify-center gap-2">
+                        <i data-lucide="sparkles" class="w-5 h-5 text-brand-accentPink animate-pulse"></i> Try Smile Simulator
+                    </a>
+                </div>
+
+                <!-- Live Dynamic Trust Badges Grid -->
+                <div class="pt-8 border-t border-white/10 dark:border-white/10 light:border-slate-200 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+                    <div class="flex flex-col items-center lg:items-start">
+                        <span class="text-2xl font-black text-white dark:text-white light:text-slate-900 tracking-tight">25K+</span>
+                        <span class="text-[11px] uppercase tracking-wider text-slate-400">Smiles Improved</span>
+                    </div>
+                    <div class="flex flex-col items-center lg:items-start">
+                        <span class="text-2xl font-black text-white dark:text-white light:text-slate-900 tracking-tight">8,500+</span>
+                        <span class="text-[11px] uppercase tracking-wider text-slate-400">Invisalign Cases</span>
+                    </div>
+                    <div class="flex flex-col items-center lg:items-start">
+                        <span class="text-2xl font-black text-white dark:text-white light:text-slate-900 tracking-tight">15+ Yrs</span>
+                        <span class="text-[11px] uppercase tracking-wider text-slate-400">Clinical Focus</span>
+                    </div>
+                    <div class="flex flex-col items-center lg:items-start">
+                        <span class="text-2xl font-black text-white dark:text-white light:text-slate-900 tracking-tight flex items-center gap-1">4.9<span class="text-amber-500">★</span></span>
+                        <span class="text-[11px] uppercase tracking-wider text-slate-400">Google Rating</span>
+                    </div>
+                    <div class="flex flex-col items-center lg:items-start col-span-2 sm:col-span-1">
+                        <span class="text-sm font-bold text-brand-accentViolet tracking-wide uppercase">Board Certified</span>
+                        <span class="text-[11px] uppercase tracking-wider text-slate-400">Top US Specialist</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Interactive Dynamic Model Showcase -->
+            <div class="lg:col-span-5 relative flex flex-col justify-center items-center">
+                <div class="w-full max-w-[420px] aspect-square rounded-3xl glass-panel p-6 bg-brand-darkBg/50 relative overflow-hidden flex flex-col items-center justify-between shadow-2xl">
+                    <!-- Tech Telemetry Overlays -->
+                    <div class="absolute top-4 left-4 flex flex-col">
+                        <span class="text-[10px] uppercase font-mono tracking-widest text-slate-400">Align_Model_v4.2</span>
+                        <span class="text-xs font-bold text-green-400 font-mono">STATUS: ACTIVE</span>
+                    </div>
+                    <div class="absolute top-4 right-4 text-right">
+                        <span class="text-[10px] uppercase font-mono tracking-widest text-slate-400">Scan Resolution</span>
+                        <span class="text-xs font-bold text-brand-accentPink font-mono">0.05mm Micro-Mesh</span>
+                    </div>
+
+                    <!-- SVG Dental Arch Simulating Interactive Transformation -->
+                    <div class="w-64 h-64 flex items-center justify-center relative mt-6">
+                        <svg id="dental-arch" class="w-full h-full text-slate-400" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <!-- Upper Arch Archwire Guide -->
+                            <path d="M15,75 Q50,15 85,75" stroke="rgba(139, 92, 246, 0.3)" stroke-dasharray="2 2" stroke-width="1"/>
+                            
+                            <!-- Dynamic Teeth Representations (Paths controlled via interactive Javascript slider) -->
+                            <!-- Mid Point (Tooth 1) -->
+                            <g id="tooth-mid">
+                                <rect x="47" y="32" width="6" height="8" rx="1.5" fill="none" stroke="currentColor"/>
+                            </g>
+                            <!-- Left Left (Tooth 2) -->
+                            <g id="tooth-l1" transform="rotate(-12 50 40)">
+                                <rect x="38" y="33" width="6" height="8" rx="1.5" fill="none" stroke="currentColor"/>
+                            </g>
+                            <!-- Right Left (Tooth 3) -->
+                            <g id="tooth-r1" transform="rotate(12 50 40)">
+                                <rect x="56" y="33" width="6" height="8" rx="1.5" fill="none" stroke="currentColor"/>
+                            </g>
+                            <!-- Left Outer (Tooth 4) -->
+                            <g id="tooth-l2" transform="rotate(-26 50 40)">
+                                <rect x="29" y="36" width="5" height="7" rx="1" fill="none" stroke="currentColor"/>
+                            </g>
+                            <!-- Right Outer (Tooth 5) -->
+                            <g id="tooth-r2" transform="rotate(26 50 40)">
+                                <rect x="66" y="36" width="5" height="7" rx="1" fill="none" stroke="currentColor"/>
+                            </g>
+                            <!-- Left Molars (Tooth 6) -->
+                            <g id="tooth-l3" transform="rotate(-40 50 40)">
+                                <rect x="22" y="42" width="5" height="6" rx="1" fill="none" stroke="currentColor"/>
+                            </g>
+                            <!-- Right Molars (Tooth 7) -->
+                            <g id="tooth-r3" transform="rotate(40 50 40)">
+                                <rect x="73" y="42" width="5" height="6" rx="1" fill="none" stroke="currentColor"/>
+                            </g>
+                        </svg>
+
+                        <!-- Holographic scanning laser sweeping line -->
+                        <div class="absolute w-full h-[2px] bg-gradient-to-r from-transparent via-brand-accentViolet to-transparent top-0 animate-[bounce_3s_infinite_alternate]"></div>
+                    </div>
+
+                    <!-- Slider for Patient Interactive Smile Transformation -->
+                    <div class="w-full space-y-2 mt-4">
+                        <div class="flex justify-between items-center text-xs font-mono">
+                            <span class="text-slate-400">Crooked Teeth (Day 1)</span>
+                            <span class="text-brand-accentViolet font-semibold">Aligning Progress</span>
+                            <span class="text-slate-400">Perfect Fit</span>
+                        </div>
+                        <input type="range" id="alignment-slider" min="0" max="100" value="0" class="w-full accent-brand-accentViolet cursor-pointer" aria-label="Simulated alignment progression slider">
+                        <p class="text-[10px] text-center text-slate-400 font-mono tracking-wider">DRAG SLIDER TO SEE ALIGNMENT SIMULATION</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST METRICS TICKER -->
+    <div class="w-full border-y border-white/5 dark:border-white/5 light:border-slate-200 py-6 overflow-hidden bg-brand-darkBg/30 relative">
+        <div class="flex gap-16 animate-[marquee_25s_linear_infinite] whitespace-nowrap min-w-max">
+            <span class="flex items-center gap-2 text-sm font-semibold tracking-wider text-slate-400"><i data-lucide="check-circle-2" class="w-4 h-4 text-brand-accentViolet"></i> Top 1% Invisalign Provider USA</span>
+            <span class="flex items-center gap-2 text-sm font-semibold tracking-wider text-slate-400"><i data-lucide="shield-check" class="w-4 h-4 text-brand-accentViolet"></i> American Association of Orthodontists Certified</span>
+            <span class="flex items-center gap-2 text-sm font-semibold tracking-wider text-slate-400"><i data-lucide="award" class="w-4 h-4 text-brand-accentViolet"></i> Best Orthodontic Studio Winner 2024</span>
+            <span class="flex items-center gap-2 text-sm font-semibold tracking-wider text-slate-400"><i data-lucide="users-2" class="w-4 h-4 text-brand-accentViolet"></i> 25,000+ Success Stories Across CA</span>
+            <span class="flex items-center gap-2 text-sm font-semibold tracking-wider text-slate-400"><i data-lucide="heart" class="w-4 h-4 text-brand-accentViolet"></i> Over 1,800+ 5-Star Google Reviews</span>
+            <!-- Duplicated list for seamless marquee loop -->
+            <span class="flex items-center gap-2 text-sm font-semibold tracking-wider text-slate-400"><i data-lucide="check-circle-2" class="w-4 h-4 text-brand-accentViolet"></i> Top 1% Invisalign Provider USA</span>
+            <span class="flex items-center gap-2 text-sm font-semibold tracking-wider text-slate-400"><i data-lucide="shield-check" class="w-4 h-4 text-brand-accentViolet"></i> American Association of Orthodontists Certified</span>
+            <span class="flex items-center gap-2 text-sm font-semibold tracking-wider text-slate-400"><i data-lucide="award" class="w-4 h-4 text-brand-accentViolet"></i> Best Orthodontic Studio Winner 2024</span>
+        </div>
+    </div>
+    <style>
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+    </style>
+
+    <!-- IMMERSIVE REAL RESULTS GALLERY -->
+    <section id="results" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center space-y-4 mb-16">
+            <span class="text-xs uppercase font-bold text-brand-accentViolet tracking-widest">Real Results</span>
+            <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight">The Glow-Up You Deserve.</h2>
+            <p class="text-slate-400 max-w-2xl mx-auto font-light">Patients do not buy braces or alignments. They buy self-assurance, better impressions, and life-changing confidence.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <!-- Dynamic Category Navigation Tab Selector -->
+            <div class="lg:col-span-3 flex lg:flex-col gap-2 overflow-x-auto lg:overflow-visible pb-4 lg:pb-0 scrollbar-none no-scrollbar">
+                <button onclick="switchCategory('invisalign')" id="btn-invisalign" class="cat-btn px-4 py-3 text-left font-bold text-sm tracking-wide rounded-xl glass-panel bg-white/5 border-l-4 border-brand-accentViolet text-white flex-shrink-0 lg:flex-shrink w-auto lg:w-full flex justify-between items-center transition-all">
+                    <span>Invisalign Transformation</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 hidden lg:block"></i>
+                </button>
+                <button onclick="switchCategory('adult')" id="btn-adult" class="cat-btn px-4 py-3 text-left font-bold text-sm tracking-wide rounded-xl glass-panel text-slate-400 flex-shrink-0 lg:flex-shrink w-auto lg:w-full flex justify-between items-center transition-all hover:bg-white/5">
+                    <span>Adult Smile Makeover</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 hidden lg:block"></i>
+                </button>
+                <button onclick="switchCategory('teen')" id="btn-teen" class="cat-btn px-4 py-3 text-left font-bold text-sm tracking-wide rounded-xl glass-panel text-slate-400 flex-shrink-0 lg:flex-shrink w-auto lg:w-full flex justify-between items-center transition-all hover:bg-white/5">
+                    <span>Teen Alignments</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 hidden lg:block"></i>
+                </button>
+                <button onclick="switchCategory('bite')" id="btn-bite" class="cat-btn px-4 py-3 text-left font-bold text-sm tracking-wide rounded-xl glass-panel text-slate-400 flex-shrink-0 lg:flex-shrink w-auto lg:w-full flex justify-between items-center transition-all hover:bg-white/5">
+                    <span>Severe Bite Correction</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 hidden lg:block"></i>
+                </button>
+            </div>
+
+            <!-- Detailed interactive Slider Showcase Container -->
+            <div class="lg:col-span-9 glass-panel rounded-3xl p-6 md:p-8 bg-brand-darkBg/50 grid grid-cols-1 md:grid-cols-2 gap-8 relative overflow-hidden">
+                <!-- Left Column: Interactive Image Comparison Split Slider -->
+                <div class="relative w-full aspect-square md:aspect-auto md:h-[400px] rounded-2xl overflow-hidden shadow-2xl group select-none">
+                    <!-- Before Image Container -->
+                    <img id="img-before" src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&q=80&w=800" alt="Orthodontic clinical case crooked teeth smile layout before alignment treatment" class="absolute inset-0 w-full h-full object-cover">
+                    <!-- After Image Container (Slicing Overlap) -->
+                    <div id="after-wrap" class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none" style="clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);">
+                        <img id="img-after" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800" alt="Orthodontic clinical case gorgeous teeth smile layout after alignment treatment" class="absolute inset-0 w-full h-full object-cover">
+                    </div>
+
+                    <!-- Custom Range Drag Control Handle -->
+                    <div id="drag-line" class="absolute top-0 bottom-0 w-[2px] bg-white cursor-ew-resize pointer-events-none" style="left: 50%;">
+                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white text-slate-900 flex items-center justify-center shadow-2xl pointer-events-none">
+                            <i data-lucide="arrow-left-right" class="w-4 h-4"></i>
+                        </div>
+                    </div>
+
+                    <!-- Range Input Layer Overlaying the image -->
+                    <input type="range" id="clip-slider" min="0" max="100" value="50" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize" aria-label="Visual Before and After sliding mask controller">
+                    
+                    <span class="absolute top-4 left-4 px-3 py-1 text-xs font-bold rounded-md bg-brand-darkBg/80 backdrop-blur-md text-white border border-white/10 uppercase tracking-widest">Before</span>
+                    <span class="absolute top-4 right-4 px-3 py-1 text-xs font-bold rounded-md bg-brand-accentViolet/80 backdrop-blur-md text-white border border-white/10 uppercase tracking-widest">After</span>
+                </div>
+
+                <!-- Right Column: Case Clinical Notes & Journey Metadata -->
+                <div class="flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <span id="case-badge" class="px-3 py-1 text-xs font-bold rounded-full bg-brand-accentViolet/20 text-brand-accentViolet border border-brand-accentViolet/30 tracking-widest uppercase">Case Study #2293</span>
+                        <h3 id="case-title" class="text-2xl font-black">Sarah's 14-Month Journey</h3>
+                        
+                        <!-- Timeline Metrics Group -->
+                        <div class="grid grid-cols-2 gap-4 py-4 border-y border-white/5 dark:border-white/5 light:border-slate-200">
+                            <div>
+                                <span class="text-xs text-slate-400 block">TREATMENT METHOD</span>
+                                <span id="case-method" class="text-sm font-bold text-white dark:text-white light:text-slate-900">Invisalign® Pro</span>
+                            </div>
+                            <div>
+                                <span class="text-xs text-slate-400 block">TOTAL TIMELINE</span>
+                                <span id="case-time" class="text-sm font-bold text-white dark:text-white light:text-slate-900">14 Months</span>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <span class="text-xs font-bold tracking-wider uppercase text-brand-accentPink block">Patient Life Transformation:</span>
+                            <blockquote id="case-quote" class="text-slate-300 italic text-sm dark:text-slate-300 light:text-slate-600">
+                                "I was so insecure about my overlapping front teeth. The clinical projection map from NEOSMILE allowed me to visualize structural alignment, and my life changed within just a year."
+                            </blockquote>
+                        </div>
+                    </div>
+
+                    <a href="#booking" class="w-full py-3.5 rounded-xl bg-white/5 hover:bg-brand-accentViolet hover:text-white text-slate-200 text-center font-bold text-sm transition-all duration-300 dark:text-slate-200 light:text-slate-800 border border-white/10 dark:border-white/10 light:border-slate-200">
+                        Get Started Like Sarah
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MEET THE ORTHODONTIST & DYNAMIC REELS -->
+    <section id="meet" class="py-24 bg-brand-darkBg/30 border-y border-white/5 dark:border-white/5 light:border-slate-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Clinical Bio Left Info -->
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-xs uppercase font-bold text-brand-accentViolet tracking-widest">Master of Orthodontics</span>
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-black leading-tight">Meet Dr. Alexandria Mercer</h2>
+                    <p class="text-slate-300 dark:text-slate-300 light:text-slate-600 font-light leading-relaxed">
+                        With over 15 years of active clinical practice and 8,500+ successful cases, Dr. Mercer is recognized among the top 1% of Invisalign specialist educators in North America. By merging biological research with surgical-grade modern robotics, she delivers precise orthodontic structures.
+                    </p>
+
+                    <!-- Credentials Stack -->
+                    <div class="grid grid-cols-2 gap-4 pt-4">
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="graduation-cap" class="w-5 h-5 text-brand-accentViolet flex-shrink-0 mt-0.5"></i>
+                            <div>
+                                <h4 class="text-sm font-bold">Columbia University</h4>
+                                <span class="text-xs text-slate-400">Doctor of Dental Surgery (DDS)</span>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="award" class="w-5 h-5 text-brand-accentViolet flex-shrink-0 mt-0.5"></i>
+                            <div>
+                                <h4 class="text-sm font-bold">ABO Board Certified</h4>
+                                <span class="text-xs text-slate-400">Highest Specialist Credential</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Short Credentials / Affiliations Row -->
+                    <div class="pt-6 border-t border-white/5 flex flex-wrap gap-4 items-center">
+                        <span class="text-xs font-mono text-slate-400">MEMBERSHIPS:</span>
+                        <span class="text-xs font-bold text-slate-300 px-2.5 py-1 rounded bg-white/5">AAO</span>
+                        <span class="text-xs font-bold text-slate-300 px-2.5 py-1 rounded bg-white/5">PCSO</span>
+                        <span class="text-xs font-bold text-slate-300 px-2.5 py-1 rounded bg-white/5">ADA</span>
+                    </div>
+                </div>
+
+                <!-- TikTok-Style Content Reel Right Panel -->
+                <div class="lg:col-span-6 space-y-4">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs uppercase tracking-widest font-mono text-slate-400">Featured Content Reel</span>
+                        <span class="text-xs text-brand-accentPink font-bold flex items-center gap-1"><i data-lucide="eye" class="w-3.5 h-3.5"></i> 142.5K Views</span>
+                    </div>
+
+                    <!-- Vertical Story / Video Cards -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <!-- Card 1 -->
+                        <div class="group relative aspect-[3/4] rounded-2xl overflow-hidden glass-panel cursor-pointer" onclick="playMockReel('myth')">
+                            <img src="https://images.unsplash.com/photo-1579684389782-64d84b5e901a?auto=format&fit=crop&q=80&w=400" alt="Dr. Mercer debunking common clinical braces orthodontics myths" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <!-- Overlay gradients -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-transparent"></div>
+                            <div class="absolute inset-0 flex flex-col justify-between p-4 z-10">
+                                <span class="self-start px-2 py-1 text-[10px] font-mono font-bold bg-black/60 rounded text-brand-accentPink">0:45</span>
+                                <div class="space-y-1">
+                                    <div class="flex items-center gap-2">
+                                        <i data-lucide="play" class="w-4 h-4 fill-white text-white"></i>
+                                        <h4 class="text-sm font-bold text-white">Debunking Orthodontic Myths</h4>
+                                    </div>
+                                    <p class="text-[11px] text-slate-300">"No, Braces do not pick up radio waves..."</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="group relative aspect-[3/4] rounded-2xl overflow-hidden glass-panel cursor-pointer" onclick="playMockReel('behind')">
+                            <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=400" alt="High-tech clinical lab scan operations behind the scenes at studio" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <!-- Overlay gradients -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-transparent"></div>
+                            <div class="absolute inset-0 flex flex-col justify-between p-4 z-10">
+                                <span class="self-start px-2 py-1 text-[10px] font-mono font-bold bg-black/60 rounded text-brand-accentPink">1:20</span>
+                                <div class="space-y-1">
+                                    <div class="flex items-center gap-2">
+                                        <i data-lucide="play" class="w-4 h-4 fill-white text-white"></i>
+                                        <h4 class="text-sm font-bold text-white">Behind the Scenes: Clinical Lab</h4>
+                                    </div>
+                                    <p class="text-[11px] text-slate-300">Precision alignment 3D printing engine workflow</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- TREATMENT EXPERIENCE HUB (NETFLIX-STYLE HERO SLIDER) -->
+    <section id="treatments" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 mb-12">
+            <div>
+                <span class="text-xs uppercase font-bold text-brand-accentViolet tracking-widest">Our Offerings</span>
+                <h2 class="text-3xl md:text-5xl font-black">Clinical Treatments Premium Hub.</h2>
+            </div>
+            <p class="text-slate-400 max-w-md font-light">Browse clinical treatment packages engineered to restore occlusion dental beauty. Complete alignment transparency.</p>
+        </div>
+
+        <!-- Horizontal scroll row -->
+        <div class="flex gap-6 overflow-x-auto pb-6 scrollbar-none no-scrollbar snap-x snap-mandatory">
+            
+            <!-- Treatment Card 1 -->
+            <div class="w-80 md:w-96 flex-shrink-0 glass-panel rounded-2xl p-6 bg-brand-darkBg/50 snap-start flex flex-col justify-between min-h-[460px] relative overflow-hidden group">
+                <div class="space-y-4">
+                    <div class="flex justify-between items-start">
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-brand-accentViolet to-indigo-500 flex items-center justify-center">
+                            <i data-lucide="shield-check" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <span class="text-xs font-mono text-emerald-400 font-bold px-2 py-1 rounded bg-emerald-500/10">TOP PICK</span>
+                    </div>
+                    <h3 class="text-2xl font-bold">Invisalign® Platinum</h3>
+                    <p class="text-sm text-slate-400 font-light">Custom 3D calculated transparent clear medical-grade thermoplastic aligners. Near-invisible clinical treatment layout.</p>
+                    
+                    <!-- Performance Metrics -->
+                    <div class="space-y-2 pt-4 border-t border-white/5">
+                        <div class="flex justify-between text-xs">
+                            <span class="text-slate-400">AVERAGE TIMELINE</span>
+                            <span class="font-bold text-white dark:text-white light:text-slate-900">8 - 14 Months</span>
+                        </div>
+                        <div class="flex justify-between text-xs">
+                            <span class="text-slate-400">COST STRUCTURE</span>
+                            <span class="font-bold text-white dark:text-white light:text-slate-900">From $99/mo (OAC)</span>
+                        </div>
+                        <div class="flex justify-between text-xs">
+                            <span class="text-slate-400">BEST SUITED FOR</span>
+                            <span class="font-bold text-brand-accentViolet">Mild to Severe Crowding</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-6">
+                    <a href="#booking" class="w-full block text-center py-3 rounded-xl bg-white/5 group-hover:bg-brand-accentViolet transition-colors text-sm font-bold text-slate-200 group-hover:text-white">Learn More & Consultation</a>
+                </div>
+            </div>
+
+            <!-- Treatment Card 2 -->
+            <div class="w-80 md:w-96 flex-shrink-0 glass-panel rounded-2xl p-6 bg-brand-darkBg/50 snap-start flex flex-col justify-between min-h-[460px] relative overflow-hidden group">
+                <div class="space-y-4">
+                    <div class="flex justify-between items-start">
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-brand-accentPink to-rose-500 flex items-center justify-center">
+                            <i data-lucide="sparkles" class="w-6 h-6 text-white"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold">Premium Smile Makeover</h3>
+                    <p class="text-sm text-slate-400 font-light">A curated synthesis of laser teeth contouring, luxury alignment strategies, and advanced whitening systems.</p>
+                    
+                    <!-- Performance Metrics -->
+                    <div class="space-y-2 pt-4 border-t border-white/5">
+                        <div class="flex justify-between text-xs">
+                            <span class="text-slate-400">AVERAGE TIMELINE</span>
+                            <span class="font-bold text-white dark:text-white light:text-slate-900">6 - 12 Months</span>
+                        </div>
+                        <div class="flex justify-between text-xs">
+                            <span class="text-slate-400">COST STRUCTURE</span>
+                            <span class="font-bold text-white dark:text-white light:text-slate-900">Custom Estimation</span>
+                        </div>
+                        <div class="flex justify-between text-xs">
+                            <span class="text-slate-400">BEST SUITED FOR</span>
+                            <span class="font-bold text-brand-accentPink">Total Aesthetic Glow-Up</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-6">
+                    <a href="#booking" class="w-full block text-center py-3 rounded-xl bg-white/5 group-hover:bg-brand-accentViolet transition-colors text-sm font-bold text-slate-200 group-hover:text-white">Learn More & Consultation</a>
+                </div>
+            </div>
+
+            <!-- Treatment Card 3 -->
+            <div class="w-80 md:w-96 flex-shrink-0 glass-panel rounded-2xl p-6 bg-brand-darkBg/50 snap-start flex flex-col justify-between min-h-[460px] relative overflow-hidden group">
+                <div class="space-y-4">
+                    <div class="flex justify-between items-start">
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center">
+                            <i data-lucide="activity" class="w-6 h-6 text-white"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold">Adult Digital Braces</h3>
+                    <p class="text-sm text-slate-400 font-light">Custom computerized clinical bracket positioning with super-elastic memory alloy archwires for speedy movement.</p>
+                    
+                    <!-- Performance Metrics -->
+                    <div class="space-y-2 pt-4 border-t border-white/5">
+                        <div class="flex justify-between text-xs">
+                            <span class="text-slate-400">AVERAGE TIMELINE</span>
+                            <span class="font-bold text-white dark:text-white light:text-slate-900">12 - 18 Months</span>
+                        </div>
+                        <div class="flex justify-between text-xs">
+                            <span class="text-slate-400">COST STRUCTURE</span>
+                            <span class="font-bold text-white dark:text-white light:text-slate-900">From $119/mo (OAC)</span>
+                        </div>
+                        <div class="flex justify-between text-xs">
+                            <span class="text-slate-400">BEST SUITED FOR</span>
+                            <span class="font-bold text-cyan-400">Deep Structural Alignment</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-6">
+                    <a href="#booking" class="w-full block text-center py-3 rounded-xl bg-white/5 group-hover:bg-brand-accentViolet transition-colors text-sm font-bold text-slate-200 group-hover:text-white">Learn More & Consultation</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- INTERACTIVE CLINICAL PROGRESS TIMELINE -->
+    <section class="py-16 bg-brand-darkBg/20 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-2xl font-bold mb-12">The Interactive Smile Journey</h3>
+            
+            <div class="grid grid-cols-2 md:grid-cols-6 gap-4">
+                <!-- Step 1 -->
+                <div onclick="revealTimelineDetail(1)" class="group cursor-pointer glass-panel p-4 rounded-xl hover:border-brand-accentViolet transition-all duration-300">
+                    <span class="text-xs font-mono text-brand-accentViolet block mb-1">STEP 01</span>
+                    <h4 class="text-sm font-bold">Digital 3D Scan</h4>
+                    <p class="text-[10px] text-slate-400 mt-2">No gooey molds. Pure 3D dental mapping.</p>
+                </div>
+                <!-- Step 2 -->
+                <div onclick="revealTimelineDetail(2)" class="group cursor-pointer glass-panel p-4 rounded-xl hover:border-brand-accentViolet transition-all duration-300">
+                    <span class="text-xs font-mono text-brand-accentViolet block mb-1">STEP 02</span>
+                    <h4 class="text-sm font-bold">AI Prediction</h4>
+                    <p class="text-[10px] text-slate-400 mt-2">See your virtual transformation instantly.</p>
+                </div>
+                <!-- Step 3 -->
+                <div onclick="revealTimelineDetail(3)" class="group cursor-pointer glass-panel p-4 rounded-xl hover:border-brand-accentViolet transition-all duration-300">
+                    <span class="text-xs font-mono text-brand-accentViolet block mb-1">STEP 03</span>
+                    <h4 class="text-sm font-bold">Custom Aligner</h4>
+                    <p class="text-[10px] text-slate-400 mt-2">Medical-grade precision engineered.</p>
+                </div>
+                <!-- Step 4 -->
+                <div onclick="revealTimelineDetail(4)" class="group cursor-pointer glass-panel p-4 rounded-xl hover:border-brand-accentViolet transition-all duration-300">
+                    <span class="text-xs font-mono text-brand-accentViolet block mb-1">STEP 04</span>
+                    <h4 class="text-sm font-bold">Progress Visits</h4>
+                    <p class="text-[10px] text-slate-400 mt-2">Short virtual or in-studio checkups.</p>
+                </div>
+                <!-- Step 5 -->
+                <div onclick="revealTimelineDetail(5)" class="group cursor-pointer glass-panel p-4 rounded-xl hover:border-brand-accentViolet transition-all duration-300">
+                    <span class="text-xs font-mono text-brand-accentViolet block mb-1">STEP 05</span>
+                    <h4 class="text-sm font-bold">Micro-Aesthetics</h4>
+                    <p class="text-[10px] text-slate-400 mt-2">Contouring, styling and glow upgrades.</p>
+                </div>
+                <!-- Step 6 -->
+                <div onclick="revealTimelineDetail(6)" class="group cursor-pointer glass-panel p-4 rounded-xl hover:border-brand-accentViolet transition-all duration-300">
+                    <span class="text-xs font-mono text-brand-accentViolet block mb-1">STEP 06</span>
+                    <h4 class="text-sm font-bold">The Reveal</h4>
+                    <p class="text-[10px] text-slate-400 mt-2">Step out with absolute confidence.</p>
+                </div>
+            </div>
+
+            <!-- Detailed Dynamic Reveal Box -->
+            <div id="timeline-detail-box" class="mt-8 max-w-2xl mx-auto glass-panel p-6 rounded-2xl bg-brand-darkBg/60 text-center animate-fadeIn hidden">
+                <p id="timeline-detail-text" class="text-sm text-slate-300"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCI-FI SMILE ASSESSMENT ENGINE HUB -->
+    <section id="ai-tools" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div class="absolute inset-0 bg-gradient-to-tr from-brand-accentViolet/10 via-transparent to-brand-accentPink/10 rounded-3xl blur-[80px] pointer-events-none"></div>
+
+        <div class="text-center space-y-4 mb-16">
+            <span class="text-xs uppercase font-bold text-brand-accentPink tracking-widest">Future Technology Platform</span>
+            <h2 class="text-3xl md:text-5xl font-black">AI Smile Assessment Engine</h2>
+            <p class="text-slate-400 max-w-2xl mx-auto font-light">Experience clinical predictions in seconds. Upload your profile or simulate key parameters below to measure compatibility.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+            
+            <!-- Left Tool: How Crooked Are My Teeth Scanner Simulation -->
+            <div class="glass-panel p-8 rounded-3xl bg-brand-darkBg/60 flex flex-col justify-between relative overflow-hidden">
+                <div class="space-y-6">
+                    <div class="flex items-center gap-3">
+                        <div class="p-2 bg-brand-accentViolet/20 rounded-xl text-brand-accentViolet">
+                            <i data-lucide="scan-face" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">AI Clinical Smile Scanner</h3>
+                            <p class="text-xs text-slate-400">Analyze alignment structural parameters instantly.</p>
+                        </div>
+                    </div>
+
+                    <!-- Drag/Drop simulated interface -->
+                    <div id="scan-container" class="border-2 border-dashed border-white/10 dark:border-white/10 light:border-slate-300 rounded-2xl p-8 flex flex-col items-center justify-center text-center space-y-4 hover:border-brand-accentViolet transition-colors relative">
+                        <i id="scan-icon" data-lucide="upload-cloud" class="w-12 h-12 text-slate-400 animate-bounce"></i>
+                        <p id="scan-text" class="text-sm text-slate-300">Drag & drop selfie here, or click to upload</p>
+                        <button onclick="startDemoScan()" class="px-4 py-2 rounded-xl bg-white/5 hover:bg-white/10 text-xs font-bold text-slate-300 transition-colors">Or Try Simulated Demo Scan</button>
+                        
+                        <!-- Real hidden file input element -->
+                        <input type="file" id="scan-file-input" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer hidden">
+                    </div>
+
+                    <!-- Scan Results Simulation Panel (Hidden by default, shown on Scan trigger) -->
+                    <div id="scan-results" class="hidden space-y-4 p-4 rounded-xl bg-white/5 border border-white/10 animate-fadeIn">
+                        <h4 class="text-sm font-bold text-brand-accentPink uppercase tracking-wider">Clinical Metric Output Report</h4>
+                        <div class="grid grid-cols-2 gap-4 text-xs">
+                            <div>
+                                <span class="text-slate-400 block mb-1">ALIGNMENT BALANCE</span>
+                                <div class="w-full bg-white/10 rounded-full h-2 overflow-hidden">
+                                    <div class="bg-brand-accentViolet h-full rounded-full" style="width: 61%;"></div>
+                                </div>
+                                <span class="font-bold text-slate-200 block mt-1">61/100 (Moderate Deviation)</span>
+                            </div>
+                            <div>
+                                <span class="text-slate-400 block mb-1">CROWDING DENSITY</span>
+                                <div class="w-full bg-white/10 rounded-full h-2 overflow-hidden">
+                                    <div class="bg-brand-accentPink h-full rounded-full" style="width: 78%;"></div>
+                                </div>
+                                <span class="font-bold text-slate-200 block mt-1">78/100 (Severe Overlap)</span>
+                            </div>
+                            <div>
+                                <span class="text-slate-400 block mb-1">OCCLUSION BITE SCORE</span>
+                                <div class="w-full bg-white/10 rounded-full h-2 overflow-hidden">
+                                    <div class="bg-emerald-500 h-full rounded-full" style="width: 89%;"></div>
+                                </div>
+                                <span class="font-bold text-slate-200 block mt-1">89/100 (Optimal Lateral)</span>
+                            </div>
+                            <div>
+                                <span class="text-slate-400 block mb-1">FUTURE ALIGNMENT OUTLOOK</span>
+                                <span class="font-bold text-emerald-400 block mt-1">99.4% Expected Success</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pt-6 border-t border-white/5 flex justify-between items-center mt-6">
+                    <span class="text-[10px] text-slate-400 font-mono">ENCRYPTED HIPAA COMPLIANT SECURE PIPELINE</span>
+                    <a href="#booking" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-accentViolet to-brand-accentPink text-xs font-bold text-white hover:opacity-90 transition-opacity">Request Official Report</a>
+                </div>
+            </div>
+
+            <!-- Right Tool: Interactive Smile Confidence Score Calculator -->
+            <div class="glass-panel p-8 rounded-3xl bg-brand-darkBg/60 flex flex-col justify-between">
+                <div class="space-y-6">
+                    <div class="flex items-center gap-3">
+                        <div class="p-2 bg-brand-accentPink/20 rounded-xl text-brand-accentPink">
+                            <i data-lucide="calculator" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Glow-Up Calculator</h3>
+                            <p class="text-xs text-slate-400">Estimate prospective transformation progress vectors.</p>
+                        </div>
+                    </div>
+
+                    <!-- Custom Glow-up Assessment Form Slider Questions -->
+                    <div class="space-y-4">
+                        <div>
+                            <label for="calc-age" class="text-xs font-bold text-slate-300 block mb-2">1. SELECT YOUR AGE BRACKET</label>
+                            <div class="grid grid-cols-3 gap-2">
+                                <button onclick="setCalcValue('age', 'teen')" class="calc-age-btn py-2 px-3 rounded-xl border border-white/10 bg-white/5 hover:border-brand-accentViolet text-xs text-slate-300 font-bold active">Teen (12-17)</button>
+                                <button onclick="setCalcValue('age', 'adult')" class="calc-age-btn py-2 px-3 rounded-xl border border-white/10 bg-white/5 hover:border-brand-accentViolet text-xs text-slate-300 font-bold">Adult (18-45)</button>
+                                <button onclick="setCalcValue('age', 'mature')" class="calc-age-btn py-2 px-3 rounded-xl border border-white/10 bg-white/5 hover:border-brand-accentViolet text-xs text-slate-300 font-bold">Senior (46+)</button>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="calc-concern" class="text-xs font-bold text-slate-300 block mb-2">2. PRIMARY ORTHODONTIC CONCERN</label>
+                            <div class="grid grid-cols-2 gap-2">
+                                <button onclick="setCalcValue('concern', 'crooked')" class="calc-concern-btn py-2 px-3 rounded-xl border border-white/10 bg-white/5 hover:border-brand-accentPink text-xs text-slate-300 font-bold active">Overlapping / Crooked</button>
+                                <button onclick="setCalcValue('concern', 'spaces')" class="calc-concern-btn py-2 px-3 rounded-xl border border-white/10 bg-white/5 hover:border-brand-accentPink text-xs text-slate-300 font-bold">Gaps / Spaces</button>
+                                <button onclick="setCalcValue('concern', 'bite')" class="calc-concern-btn py-2 px-3 rounded-xl border border-white/10 bg-white/5 hover:border-brand-accentPink text-xs text-slate-300 font-bold">Overbite / Underbite</button>
+                                <button onclick="setCalcValue('concern', 'minor')" class="calc-concern-btn py-2 px-3 rounded-xl border border-white/10 bg-white/5 hover:border-brand-accentPink text-xs text-slate-300 font-bold">Minor Crowding</button>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="text-xs font-bold text-slate-300 block mb-2">3. CHOOSE DESIRED METHOD</label>
+                            <div class="grid grid-cols-2 gap-2">
+                                <button onclick="setCalcValue('method', 'invisalign')" class="calc-method-btn py-2 px-3 rounded-xl border border-white/10 bg-white/5 hover:border-brand-accentViolet text-xs text-slate-300 font-bold active">Invisalign Aligners</button>
+                                <button onclick="setCalcValue('method', 'braces')" class="calc-method-btn py-2 px-3 rounded-xl border border-white/10 bg-white/5 hover:border-brand-accentViolet text-xs text-slate-300 font-bold">Advanced Metal Braces</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Calculated Output Area -->
+                <div class="mt-8 p-4 rounded-xl bg-gradient-to-tr from-brand-accentViolet/15 to-brand-accentPink/15 border border-white/10 space-y-4">
+                    <div class="flex justify-between items-center text-sm">
+                        <span class="text-slate-400">ESTIMATED TREATMENT LENGTH:</span>
+                        <span id="output-length" class="font-bold text-white dark:text-white light:text-slate-900 text-lg">9 - 12 Months</span>
+                    </div>
+                    <div class="flex justify-between items-center text-sm">
+                        <span class="text-slate-400">ALIGNMENT STABILITY FORECAST:</span>
+                        <span id="output-stability" class="font-bold text-emerald-400 text-lg">High (95%)</span>
+                    </div>
+                    <button onclick="bookCalculatedConsult()" class="w-full py-3 rounded-xl bg-gradient-to-r from-brand-accentViolet to-brand-accentPink text-white font-bold text-xs tracking-wider uppercase hover:opacity-95">Lock in this Projection</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- INVISALIGN VS BRACES FACE-OFF -->
+    <section class="py-24 bg-brand-darkBg/30 border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center space-y-4 mb-16">
+                <span class="text-xs uppercase font-bold text-brand-accentViolet tracking-widest">Interactive Versus Dashboard</span>
+                <h2 class="text-3xl md:text-5xl font-black">Invisalign vs Braces Face-Off</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto font-light">Get transparent guidance. Adjust parameters to check how each technology stacks against your daily life requirements.</p>
+            </div>
+
+            <!-- Face Off Grid Card -->
+            <div class="glass-panel rounded-3xl p-6 md:p-8 bg-brand-darkBg/50 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Left: Invisalign Side -->
+                <div class="space-y-6 border-r border-white/5 pr-0 lg:pr-12">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-2xl font-black text-brand-accentViolet">Invisalign® Clear Aligners</h3>
+                        <span class="text-xs font-mono text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded">Highly Aesthetic</span>
+                    </div>
+                    <p class="text-sm text-slate-400">Removable medical trays matching premium executive standards. Enjoy dining without bracket complications.</p>
+                    
+                    <!-- Feature score bars -->
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between text-xs mb-1">
+                                <span class="text-slate-400">VISUAL SUBTLETY</span>
+                                <span class="font-bold text-white">98% Invisible</span>
+                            </div>
+                            <div class="w-full bg-white/5 rounded-full h-1.5 overflow-hidden">
+                                <div class="bg-brand-accentViolet h-full rounded-full" style="width: 98%;"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs mb-1">
+                                <span class="text-slate-400">LIFESTYLE FLEXIBILITY</span>
+                                <span class="font-bold text-white">100% Removable</span>
+                            </div>
+                            <div class="w-full bg-white/5 rounded-full h-1.5 overflow-hidden">
+                                <div class="bg-brand-accentViolet h-full rounded-full" style="width: 100%;"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs mb-1">
+                                <span class="text-slate-400">COMFORT COEFFICIENT</span>
+                                <span class="font-bold text-white">90% Smooth</span>
+                            </div>
+                            <div class="w-full bg-white/5 rounded-full h-1.5 overflow-hidden">
+                                <div class="bg-brand-accentViolet h-full rounded-full" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Braces Side -->
+                <div class="space-y-6">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-2xl font-black text-brand-accentPink">Digital Smart Braces</h3>
+                        <span class="text-xs font-mono text-amber-500 bg-amber-500/10 px-2 py-0.5 rounded">Severe Alignment Specialist</span>
+                    </div>
+                    <p class="text-sm text-slate-400">Fixed ceramic or steel fixtures ensuring constant multi-dimensional tension vectors. Exceptional control for critical bites.</p>
+                    
+                    <!-- Feature score bars -->
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between text-xs mb-1">
+                                <span class="text-slate-400">STRUCTURAL ALIGNMENT SPEED</span>
+                                <span class="font-bold text-white">95% High Performance</span>
+                            </div>
+                            <div class="w-full bg-white/5 rounded-full h-1.5 overflow-hidden">
+                                <div class="bg-brand-accentPink h-full rounded-full" style="width: 95%;"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs mb-1">
+                                <span class="text-slate-400">PATIENT COMPLIANCE INDEPENDENCE</span>
+                                <span class="font-bold text-white">100% Passive Control</span>
+                            </div>
+                            <div class="w-full bg-white/5 rounded-full h-1.5 overflow-hidden">
+                                <div class="bg-brand-accentPink h-full rounded-full" style="width: 100%;"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs mb-1">
+                                <span class="text-slate-400">SEVERE OCCLUSION MANAGEMENT</span>
+                                <span class="font-bold text-white">99% Absolute Control</span>
+                            </div>
+                            <div class="w-full bg-white/5 rounded-full h-1.5 overflow-hidden">
+                                <div class="bg-brand-accentPink h-full rounded-full" style="width: 99%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TIKTOK-STYLE SMILE FEED (VERTICAL SHORT VIDEOS) -->
+    <section class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center space-y-4 mb-16">
+            <span class="text-xs uppercase font-bold text-brand-accentPink tracking-widest">Trending Communities</span>
+            <h2 class="text-3xl md:text-5xl font-black">#NeoSmileStories Feed</h2>
+            <p class="text-slate-400 max-w-2xl mx-auto font-light">Swipe through unfiltered post-treatment reveals. Witness confidence restored in real-time.</p>
+        </div>
+
+        <!-- Horizontal scroll of mock mobile feed vertical views -->
+        <div class="flex gap-6 overflow-x-auto pb-8 snap-x snap-mandatory scrollbar-none no-scrollbar">
+            
+            <!-- Feed Card 1 -->
+            <div class="w-72 md:w-80 flex-shrink-0 aspect-[9/16] rounded-3xl overflow-hidden glass-panel relative group snap-start select-none">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=600" alt="Joyful alignment removal reaction" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+                
+                <!-- Micro controls overlay mimicking social interactions -->
+                <div class="absolute right-4 bottom-24 flex flex-col gap-4 items-center z-10">
+                    <button class="p-2.5 rounded-full bg-black/60 text-white hover:text-brand-accentPink transition-colors"><i data-lucide="heart" class="w-5 h-5 fill-white"></i></button>
+                    <span class="text-[10px] text-white font-bold">14.2K</span>
+                    <button class="p-2.5 rounded-full bg-black/60 text-white hover:text-brand-accentViolet transition-colors"><i data-lucide="message-circle" class="w-5 h-5"></i></button>
+                    <span class="text-[10px] text-white font-bold">428</span>
+                </div>
+
+                <div class="absolute bottom-4 left-4 right-16 text-white z-10 space-y-1">
+                    <span class="text-xs font-mono font-bold">@chloe_glows</span>
+                    <p class="text-xs font-light">"Omg, the metal braces are OFF today! Look at my lateral alignment alignment! Dr. Mercer is a genius! 😍"</p>
+                </div>
+            </div>
+
+            <!-- Feed Card 2 -->
+            <div class="w-72 md:w-80 flex-shrink-0 aspect-[9/16] rounded-3xl overflow-hidden glass-panel relative group snap-start select-none">
+                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=600" alt="Adult corporate professional smile feedback" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+                
+                <!-- Micro controls overlay mimicking social interactions -->
+                <div class="absolute right-4 bottom-24 flex flex-col gap-4 items-center z-10">
+                    <button class="p-2.5 rounded-full bg-black/60 text-white hover:text-brand-accentPink transition-colors"><i data-lucide="heart" class="w-5 h-5 fill-white"></i></button>
+                    <span class="text-[10px] text-white font-bold">8.9K</span>
+                    <button class="p-2.5 rounded-full bg-black/60 text-white hover:text-brand-accentViolet transition-colors"><i data-lucide="message-circle" class="w-5 h-5"></i></button>
+                    <span class="text-[10px] text-white font-bold">120</span>
+                </div>
+
+                <div class="absolute bottom-4 left-4 right-16 text-white z-10 space-y-1">
+                    <span class="text-xs font-mono font-bold">@marcus_corp</span>
+                    <p class="text-xs font-light">"Decided to secure executive Invisalign aligners at 32. Best business decision ever. Nobody noticed the aligners!"</p>
+                </div>
+            </div>
+
+            <!-- Feed Card 3 -->
+            <div class="w-72 md:w-80 flex-shrink-0 aspect-[9/16] rounded-3xl overflow-hidden glass-panel relative group snap-start select-none">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=600" alt="Aesthetic portrait of patient after treatment with pristine orthodontic tooth structure" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+                
+                <!-- Micro controls overlay mimicking social interactions -->
+                <div class="absolute right-4 bottom-24 flex flex-col gap-4 items-center z-10">
+                    <button class="p-2.5 rounded-full bg-black/60 text-white hover:text-brand-accentPink transition-colors"><i data-lucide="heart" class="w-5 h-5 fill-white"></i></button>
+                    <span class="text-[10px] text-white font-bold">22.4K</span>
+                    <button class="p-2.5 rounded-full bg-black/60 text-white hover:text-brand-accentViolet transition-colors"><i data-lucide="message-circle" class="w-5 h-5"></i></button>
+                    <span class="text-[10px] text-white font-bold">842</span>
+                </div>
+
+                <div class="absolute bottom-4 left-4 right-16 text-white z-10 space-y-1">
+                    <span class="text-xs font-mono font-bold">@sophie_arch</span>
+                    <p class="text-xs font-light">"12 months with NeoSmile completely transformed my facial profiles symmetry. Highly recommend!"</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ACCESSIBLE PRICING TRANSPARENCY & COST ESTIMATOR -->
+    <section id="pricing" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center space-y-4 mb-16">
+            <span class="text-xs uppercase font-bold text-brand-accentViolet tracking-widest">Financial Comfort</span>
+            <h2 class="text-3xl md:text-5xl font-black">Zero Secrets. Complete Pricing Transparency.</h2>
+            <p class="text-slate-400 max-w-2xl mx-auto font-light">Get estimated breakdowns immediately. We work with all major US dental insurances, flexible PPO programs, HSA & FSA allocations.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+            
+            <!-- Cost Estimation Calculator Engine -->
+            <div class="lg:col-span-7 glass-panel p-8 rounded-3xl bg-brand-darkBg/60 flex flex-col justify-between">
+                <div class="space-y-6">
+                    <h3 class="text-xl font-bold flex items-center gap-2"><i data-lucide="calculator" class="w-5 h-5 text-brand-accentViolet"></i> Calculate Your Monthly Fee</h3>
+                    
+                    <div class="space-y-4">
+                        <!-- Select Treatment Option -->
+                        <div>
+                            <label for="price-treatment" class="text-xs font-bold text-slate-300 block mb-2">1. CHOOSE YOUR CLINICAL METHOD</label>
+                            <select id="price-treatment" onchange="calculatePriceEstimate()" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-slate-300 text-sm focus:border-brand-accentViolet focus:outline-none">
+                                <option value="invisalign">Invisalign Platinum Aligners ($5,400 value)</option>
+                                <option value="braces">Digital Advanced Braces ($4,800 value)</option>
+                                <option value="combo">Premium Makeover Suite ($6,800 value)</option>
+                            </select>
+                        </div>
+
+                        <!-- Select Estimated Insurance Coverage Tier -->
+                        <div>
+                            <label for="price-insurance" class="text-xs font-bold text-slate-300 block mb-2">2. EXPECTED ORTHODONTIC INSURANCE COVERAGE</label>
+                            <select id="price-insurance" onchange="calculatePriceEstimate()" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-slate-300 text-sm focus:border-brand-accentViolet focus:outline-none">
+                                <option value="none">No Dental Orthodontic Insurance Plan Coverage</option>
+                                <option value="partial">Standard PPO Plan ($1,500 expected coverage)</option>
+                                <option value="high">Premium High-Tier Ortho Plan ($2,500 expected coverage)</option>
+                            </select>
+                        </div>
+
+                        <!-- Custom Down Payment Slider -->
+                        <div>
+                            <div class="flex justify-between items-center text-xs mb-2">
+                                <span class="font-bold text-slate-300">3. DESIRED DOWN PAYMENT AMOUNT</span>
+                                <span id="downpayment-label" class="font-bold text-brand-accentViolet">$500 Down</span>
+                            </div>
+                            <input type="range" id="price-downpayment" min="0" max="2000" step="100" value="500" oninput="calculatePriceEstimate()" class="w-full accent-brand-accentViolet" aria-label="Flexible Down Payment Scale">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Price Calculator Live Output Metrics Card -->
+                <div class="mt-8 pt-6 border-t border-white/5 grid grid-cols-2 md:grid-cols-3 gap-4">
+                    <div>
+                        <span class="text-xs text-slate-400 block">TOTAL COPAY OUT-OF-POCKET</span>
+                        <span id="out-of-pocket" class="text-2xl font-black text-white dark:text-white light:text-slate-900">$4,900</span>
+                    </div>
+                    <div>
+                        <span class="text-xs text-slate-400 block">FLEXIBLE MONTHLY TERM</span>
+                        <span class="text-2xl font-black text-brand-accentPink">24 Months</span>
+                    </div>
+                    <div class="col-span-2 md:col-span-1">
+                        <span class="text-xs text-slate-400 block">EST. MONTHLY PMT</span>
+                        <span id="monthly-payment" class="text-2xl font-black text-emerald-400">$183/mo</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Major Insurances & Financial Protections Card -->
+            <div class="lg:col-span-5 glass-panel p-8 rounded-3xl bg-brand-darkBg/60 flex flex-col justify-between">
+                <div class="space-y-6">
+                    <h3 class="text-xl font-bold">Insurance & Financial Integration</h3>
+                    <p class="text-sm text-slate-400">Our medical billing desk handles filing for PPO plans direct, ensuring minimized cash outlay. We integrate zero-interest payment structures.</p>
+                    
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-2.5 text-xs text-slate-300">
+                            <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Accept FSA/HSA Debit Cards Direct
+                        </div>
+                        <div class="flex items-center gap-2.5 text-xs text-slate-300">
+                            <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Interest-Free Payment Options
+                        </div>
+                        <div class="flex items-center gap-2.5 text-xs text-slate-300">
+                            <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Zero Initial consultation Fees
+                        </div>
+                    </div>
+
+                    <div class="border-t border-white/5 pt-4 space-y-2">
+                        <span class="text-[10px] tracking-wider uppercase font-mono text-slate-400">PARTNER INSURANCES FILED IN-HOUSE</span>
+                        <div class="grid grid-cols-2 gap-2 text-xs font-semibold text-slate-300">
+                            <div class="p-2 rounded bg-white/5">Delta Dental</div>
+                            <div class="p-2 rounded bg-white/5">MetLife</div>
+                            <div class="p-2 rounded bg-white/5">Cigna</div>
+                            <div class="p-2 rounded bg-white/5">Aetna PPO</div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#booking" class="w-full mt-6 py-3.5 rounded-xl bg-white/5 hover:bg-brand-accentViolet text-slate-200 text-center font-bold text-sm transition-all duration-300 dark:text-slate-200 light:text-slate-800 border border-white/10">
+                    Get Free Insurance Verification
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- DENTAL ANXIETY QUIZ SECTION -->
+    <section class="py-16 max-w-4xl mx-auto px-4">
+        <div class="glass-panel p-8 rounded-3xl bg-brand-darkBg/50 border-t-4 border-brand-accentViolet space-y-6">
+            <div class="text-center space-y-2">
+                <span class="text-xs uppercase font-bold text-brand-accentPink tracking-widest">Comfort Assessment</span>
+                <h3 class="text-2xl font-black">Dental Anxiety Level Quiz</h3>
+                <p class="text-xs text-slate-400">Many people feel nervous about orthodontic adjustments. Answer 3 quick questions so we can calibrate your care.</p>
+            </div>
+
+            <div id="quiz-question-container" class="space-y-4">
+                <div class="space-y-2">
+                    <span class="text-xs font-bold text-slate-300 block">QUESTION 1: How do you feel about standard orthodontic visits?</span>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                        <button onclick="selectAnxietyAnswer(1, 1)" class="quiz-q1-btn py-2.5 px-3 rounded-xl border border-white/10 bg-white/5 hover:border-brand-accentViolet text-xs text-slate-300 text-left">Relaxed & Comfortable</button>
+                        <button onclick="selectAnxietyAnswer(1, 2)" class="quiz-q1-btn py-2.5 px-3 rounded-xl border border-white/10 bg-white/5 hover:border-brand-accentViolet text-xs text-slate-300 text-left">Slightly Apprehensive</button>
+                        <button onclick="selectAnxietyAnswer(1, 3)" class="quiz-q1-btn py-2.5 px-3 rounded-xl border border-white/10 bg-white/5 hover:border-brand-accentViolet text-xs text-slate-300 text-left">Highly Anxious</button>
+                    </div>
+                </div>
+
+                <div class="space-y-2">
+                    <span class="text-xs font-bold text-slate-300 block">QUESTION 2: What is your preferred environment treatment vibe?</span>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                        <button onclick="selectAnxietyAnswer(2, 1)" class="quiz-q2-btn py-2.5 px-3 rounded-xl border border-white/10 bg-white/5 hover:border-brand-accentViolet text-xs text-slate-300 text-left">Standard clinical care</button>
+                        <button onclick="selectAnxietyAnswer(2, 2)" class="quiz-q2-btn py-2.5 px-3 rounded-xl border border-white/10 bg-white/5 hover:border-brand-accentViolet text-xs text-slate-300 text-left">Calming music & low lights</button>
+                        <button onclick="selectAnxietyAnswer(2, 3)" class="quiz-q2-btn py-2.5 px-3 rounded-xl border border-white/10 bg-white/5 hover:border-brand-accentViolet text-xs text-slate-300 text-left">Premium VR Goggles / Comfort blankets</button>
+                    </div>
+                </div>
+
+                <div class="space-y-2">
+                    <span class="text-xs font-bold text-slate-300 block">QUESTION 3: What helps you relax the most during diagnostic scans?</span>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                        <button onclick="selectAnxietyAnswer(3, 1)" class="quiz-q3-btn py-2.5 px-3 rounded-xl border border-white/10 bg-white/5 hover:border-brand-accentViolet text-xs text-slate-300 text-left">Clear step-by-step explanations</button>
+                        <button onclick="selectAnxietyAnswer(3, 2)" class="quiz-q3-btn py-2.5 px-3 rounded-xl border border-white/10 bg-white/5 hover:border-brand-accentViolet text-xs text-slate-300 text-left">Minimized medical jargon</button>
+                        <button onclick="selectAnxietyAnswer(3, 3)" class="quiz-q3-btn py-2.5 px-3 rounded-xl border border-white/10 bg-white/5 hover:border-brand-accentViolet text-xs text-slate-300 text-left">Just fast execution</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quiz Output Recommendations -->
+            <div id="quiz-recommendation" class="hidden p-4 rounded-xl bg-gradient-to-tr from-brand-accentViolet/10 to-transparent border border-brand-accentViolet/25 text-center animate-fadeIn space-y-2">
+                <span class="text-xs font-mono font-bold text-brand-accentPink uppercase">Your Comfort Strategy Match:</span>
+                <h4 id="quiz-comfort-title" class="text-base font-bold">The Premium Zen Experience</h4>
+                <p id="quiz-comfort-desc" class="text-xs text-slate-300 max-w-lg mx-auto">We've noted your anxiety profile. During your visit, you will receive noise-canceling headsets, a private aromatherapy suite, and real-time physical progress previews with zero unexpected actions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PREMIUM HIGH-CONVERSION BOOKING CONCIERGE -->
+    <section id="booking" class="py-24 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="glass-panel rounded-[2rem] p-8 md:p-12 bg-gradient-to-b from-brand-darkBg/80 to-slate-900/40 border border-white/10 relative overflow-hidden">
+            
+            <div class="absolute -top-32 -left-32 w-80 h-80 bg-brand-accentViolet/15 rounded-full blur-[100px] pointer-events-none"></div>
+            <div class="absolute -bottom-32 -right-32 w-80 h-80 bg-brand-accentPink/15 rounded-full blur-[100px] pointer-events-none"></div>
+
+            <div class="max-w-2xl mx-auto text-center space-y-6 relative z-10">
+                <span class="text-xs uppercase font-bold text-brand-accentViolet tracking-widest">Interactive Direct Scheduler</span>
+                <h2 class="text-3xl md:text-5xl font-black">Begin Your Orthodontic Transformation Today.</h2>
+                <p class="text-slate-300 font-light text-sm md:text-base">No commitment required. Book your zero-charge digital diagnostic clinical scan and private consult session.</p>
+
+                <!-- Mini contact info links -->
+                <div class="flex flex-wrap items-center justify-center gap-6 text-xs text-slate-400">
+                    <span class="flex items-center gap-1.5"><i data-lucide="phone" class="w-3.5 h-3.5 text-brand-accentViolet"></i> SMS or Call: (800) 555-0199</span>
+                    <span class="flex items-center gap-1.5"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-brand-accentViolet"></i> Silicon Valley & Bay Area, CA</span>
+                </div>
+
+                <!-- Complete interactive form -->
+                <form id="consult-booking-form" onsubmit="submitConsultBookingForm(event)" class="space-y-4 text-left pt-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label for="booking-name" class="text-[10px] uppercase font-bold text-slate-300 block mb-1">Your Full Name</label>
+                            <input type="text" id="booking-name" required placeholder="Alex Mercer" class="w-full bg-slate-950/60 border border-white/10 rounded-xl px-4 py-3 text-slate-200 text-sm focus:border-brand-accentViolet focus:outline-none">
+                        </div>
+                        <div>
+                            <label for="booking-phone" class="text-[10px] uppercase font-bold text-slate-300 block mb-1">Your Direct Phone (SMS Enabled)</label>
+                            <input type="tel" id="booking-phone" required placeholder="(555) 000-0000" class="w-full bg-slate-950/60 border border-white/10 rounded-xl px-4 py-3 text-slate-200 text-sm focus:border-brand-accentViolet focus:outline-none">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label for="booking-email" class="text-[10px] uppercase font-bold text-slate-300 block mb-1">Email Address</label>
+                            <input type="email" id="booking-email" required placeholder="alex@domain.com" class="w-full bg-slate-950/60 border border-white/10 rounded-xl px-4 py-3 text-slate-200 text-sm focus:border-brand-accentViolet focus:outline-none">
+                        </div>
+                        <div>
+                            <label for="booking-time" class="text-[10px] uppercase font-bold text-slate-300 block mb-1">Preferred Time of Day</label>
+                            <select id="booking-time" class="w-full bg-slate-950/60 border border-white/10 rounded-xl px-4 py-3 text-slate-300 text-sm focus:border-brand-accentViolet focus:outline-none">
+                                <option value="morning">Morning (8:00 AM - 12:00 PM)</option>
+                                <option value="afternoon">Afternoon (12:00 PM - 4:00 PM)</option>
+                                <option value="evening">Late / Evening</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-brand-accentViolet to-brand-accentPink text-white font-bold tracking-wide shadow-xl shadow-brand-accentViolet/20 hover:scale-[1.01] transition-all">
+                        Request Private Consultation
+                    </button>
+                    
+                    <p class="text-[10px] text-center text-slate-400">By clicking above, you authorize NEOSMILE™ AI Studio to send SMS updates. Opt-out at any time.</p>
+                </form>
+
+                <!-- Real confirmation feedback toast -->
+                <div id="booking-confirmation" class="hidden p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-center animate-fadeIn">
+                    <span class="text-sm font-bold text-emerald-400 block">Thank you! Your consult request has been locked in.</span>
+                    <p class="text-xs text-slate-300 mt-1">Our clinical coordinators will text/call your phone within 15 minutes to confirm details.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PREMIUM COMPREHENSIVE FOOTER -->
+    <footer class="bg-brand-darkBg border-t border-white/5 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+            
+            <!-- Column 1: Brand Info -->
+            <div class="space-y-4">
+                <span class="text-xl font-bold tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">NEOSMILE<span class="text-xs text-brand-accentViolet font-semibold ml-0.5">AI</span></span>
+                <p class="text-xs text-slate-400 leading-relaxed font-light">Combining world-class clinical robotic accuracy, transparent payment paradigms, and orthodontic artistry to deliver beautiful smiles.</p>
+            </div>
+
+            <!-- Column 2: Treatments -->
+            <div>
+                <h4 class="text-xs font-bold tracking-widest uppercase text-white mb-4">CLINICAL SERVICES</h4>
+                <div class="space-y-2 text-xs text-slate-400">
+                    <a href="#treatments" class="block hover:text-white transition-colors">Invisalign® Platinum Plan</a>
+                    <a href="#treatments" class="block hover:text-white transition-colors">Digital Advanced Braces</a>
+                    <a href="#treatments" class="block hover:text-white transition-colors">Premium Smile Makeover Suite</a>
+                    <a href="#treatments" class="block hover:text-white transition-colors">Bite Correction Occlusion Care</a>
+                </div>
+            </div>
+
+            <!-- Column 3: Contact/Hours -->
+            <div>
+                <h4 class="text-xs font-bold tracking-widest uppercase text-white mb-4">STUDIO DETAILS</h4>
+                <div class="space-y-2 text-xs text-slate-400">
+                    <span class="block">Mon - Fri: 8:00 AM - 6:00 PM</span>
+                    <span class="block">Saturday: By Appointment Only</span>
+                    <span class="block">Address: 500 Innovation Way, Suite 100, CA</span>
+                    <span class="block">Phone: +1 (800) 555-0199</span>
+                </div>
+            </div>
+
+            <!-- Column 4: Legals/HIPAA -->
+            <div>
+                <h4 class="text-xs font-bold tracking-widest uppercase text-white mb-4">COMPLIANCE & LEGAL</h4>
+                <div class="space-y-2 text-xs text-slate-400">
+                    <span class="block">HIPAA Secure Client Communication</span>
+                    <span class="block">ADA Accessibility Compliant</span>
+                    <span class="block">Privacy and Cookie Usage Agreements</span>
+                    <span class="block">Clinical Safety Certifications</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] text-slate-400">
+            <span>© 2026 NEOSMILE™ AI Orthodontics, Inc. All rights reserved globally.</span>
+            <span>Made with precision for the future of clinical orthodontics.</span>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE FLOATING AI ASSISTANT WIDGET -->
+    <div id="ai-chat-widget" class="fixed bottom-6 right-6 z-50 flex flex-col items-end">
+        
+        <!-- Chat Bubble Frame (Hidden by default) -->
+        <div id="ai-chat-box" class="hidden w-80 md:w-96 glass-panel rounded-2xl bg-brand-darkBg/95 border border-white/10 shadow-2xl flex-col overflow-hidden mb-4 animate-fadeIn">
+            <!-- Header bar -->
+            <div class="p-4 bg-gradient-to-r from-brand-accentViolet to-brand-accentPink text-white flex justify-between items-center">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="bot" class="w-5 h-5 text-white animate-pulse"></i>
+                    <div>
+                        <span class="text-xs font-bold block">NEOSMILE™ AI Advisor</span>
+                        <span class="text-[9px] text-slate-200">24/7 Virtual Clinical Assistant</span>
+                    </div>
+                </div>
+                <button onclick="toggleAiChat()" class="p-1 rounded bg-white/20 hover:bg-white/30 text-white" aria-label="Close Chat Window"><i data-lucide="x" class="w-4 h-4"></i></button>
+            </div>
+
+            <!-- Message list container -->
+            <div id="ai-chat-messages" class="p-4 h-64 overflow-y-auto space-y-3 text-xs no-scrollbar">
+                <div class="flex gap-2 items-start">
+                    <div class="p-1.5 rounded-lg bg-white/5 text-slate-300">👋</div>
+                    <div class="p-2.5 rounded-xl bg-white/5 text-slate-300 max-w-[80%]">
+                        Hello! I am the NEOSMILE™ AI Agent. I can calculate estimated costs, verify insurance networks, or help book a consultation. How can I help you today?
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Predefined Quick Choice Chips -->
+            <div class="px-4 py-2 bg-slate-950/20 flex gap-2 overflow-x-auto scrollbar-none no-scrollbar border-t border-white/5">
+                <button onclick="sendQuickMessage('How much does Invisalign cost?')" class="flex-shrink-0 px-3 py-1.5 rounded-full bg-white/5 hover:bg-white/10 text-[10px] text-slate-300 font-semibold">Invisalign Costs</button>
+                <button onclick="sendQuickMessage('Do you accept Delta Dental?')" class="flex-shrink-0 px-3 py-1.5 rounded-full bg-white/5 hover:bg-white/10 text-[10px] text-slate-300 font-semibold">Insurance</button>
+                <button onclick="sendQuickMessage('Is the initial consultation completely free?')" class="flex-shrink-0 px-3 py-1.5 rounded-full bg-white/5 hover:bg-white/10 text-[10px] text-slate-300 font-semibold">Free Consultation</button>
+            </div>
+
+            <!-- Text Input bar -->
+            <div class="p-3 border-t border-white/5 bg-slate-950/40 flex gap-2">
+                <input type="text" id="chat-user-input" placeholder="Type clinical question..." class="flex-1 bg-slate-900 border border-white/10 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-brand-accentViolet">
+                <button onclick="handleUserChatInput()" class="p-2 rounded-lg bg-brand-accentViolet text-white hover:opacity-90"><i data-lucide="send" class="w-4 h-4"></i></button>
+            </div>
+        </div>
+
+        <!-- Floating Action Button -->
+        <button onclick="toggleAiChat()" class="flex items-center gap-2 px-4 py-3.5 rounded-full bg-gradient-to-tr from-brand-accentViolet to-brand-accentPink text-white font-bold text-sm tracking-wide shadow-2xl shadow-brand-accentViolet/30 hover:scale-105 transition-all">
+            <i data-lucide="bot" class="w-5 h-5 animate-pulse"></i>
+            <span>Talk to AI Advisor</span>
+        </button>
+    </div>
+
+    <!-- MAIN INTERACTIVE JAVASCRIPTLOGIC CONTROL DESK -->
+    <script>
+        // Global State variables
+        let appState = {
+            theme: 'dark',
+            calcAge: 'teen',
+            calcConcern: 'crooked',
+            calcMethod: 'invisalign',
+            mobileMenuOpen: false,
+            chatOpen: false
+        };
+
+        // Initialize Icons
+        lucide.createIcons();
+
+        // 1. Theme Controller
+        function toggleTheme() {
+            const htmlEl = document.documentElement;
+            if (htmlEl.classList.contains('dark')) {
+                htmlEl.classList.remove('dark');
+                htmlEl.classList.add('light');
+                appState.theme = 'light';
+            } else {
+                htmlEl.classList.remove('light');
+                htmlEl.classList.add('dark');
+                appState.theme = 'dark';
+            }
+        }
+
+        // 2. Mobile Menu Controller
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const burger = document.getElementById('menu-icon-burger');
+            const close = document.getElementById('menu-icon-close');
+            
+            appState.mobileMenuOpen = !appState.mobileMenuOpen;
+            if (appState.mobileMenuOpen) {
+                menu.classList.remove('hidden');
+                burger.classList.add('hidden');
+                close.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+                burger.classList.remove('hidden');
+                close.classList.add('hidden');
+            }
+        }
+
+        // 3. Simulated 3D Dental Arch Slider Alignment Controller
+        const alignmentSlider = document.getElementById('alignment-slider');
+        if (alignmentSlider) {
+            alignmentSlider.addEventListener('input', function(e) {
+                const progress = e.target.value; // 0 to 100
+                
+                // Teeth element selectors
+                const tMid = document.getElementById('tooth-mid');
+                const tL1 = document.getElementById('tooth-l1');
+                const tR1 = document.getElementById('tooth-r1');
+                const tL2 = document.getElementById('tooth-l2');
+                const tR2 = document.getElementById('tooth-r2');
+                const tL3 = document.getElementById('tooth-l3');
+                const tR3 = document.getElementById('tooth-r3');
+
+                // Dynamic interpolation values (rotate toward 0 for straight alignment as progress increases)
+                if (tL1) tL1.setAttribute('transform', `rotate(${-12 + (12 * (progress / 100))} 50 40)`);
+                if (tR1) tR1.setAttribute('transform', `rotate(${12 - (12 * (progress / 100))} 50 40)`);
+                if (tL2) tL2.setAttribute('transform', `rotate(${-26 + (26 * (progress / 100))} 50 40)`);
+                if (tR2) tR2.setAttribute('transform', `rotate(${26 - (26 * (progress / 100))} 50 40)`);
+                if (tL3) tL3.setAttribute('transform', `rotate(${-40 + (40 * (progress / 100))} 50 40)`);
+                if (tR3) tR3.setAttribute('transform', `rotate(${40 - (40 * (progress / 100))} 50 40)`);
+            });
+        }
+
+        // 4. Before-After Split Image Custom Range Slider
+        const clipSlider = document.getElementById('clip-slider');
+        const afterWrap = document.getElementById('after-wrap');
+        const dragLine = document.getElementById('drag-line');
+        if (clipSlider && afterWrap && dragLine) {
+            clipSlider.addEventListener('input', function(e) {
+                const val = e.target.value;
+                afterWrap.style.clipPath = `polygon(${val}% 0, 100% 0, 100% 100%, ${val}% 100%)`;
+                dragLine.style.left = `${val}%`;
+            });
+        }
+
+        // 5. Case Study Gallery Category Switcher
+        const casesData = {
+            invisalign: {
+                title: "Sarah's 14-Month Journey",
+                method: "Invisalign® Pro Suite",
+                time: "14 Months",
+                quote: "I was so insecure about my overlapping front teeth. The clinical projection map from NEOSMILE allowed me to visualize structural alignment, and my life changed within just a year.",
+                badge: "Case Study #2293",
+                beforeImg: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&q=80&w=800",
+                afterImg: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800"
+            },
+            adult: {
+                title: "Robert's Executive Makeover",
+                method: "Elite Alignment Protocols",
+                time: "11 Months",
+                quote: "Being in corporate management made me self-conscious about speech and structural overlap. Dr. Mercer's team delivered a professional alignment solution with completely transparent brackets.",
+                badge: "Case Study #8402",
+                beforeImg: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800",
+                afterImg: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=800"
+            },
+            teen: {
+                title: "Emily's Teen Aligner Success",
+                method: "Standard Teen Invisalign®",
+                time: "9 Months",
+                quote: "I didn't want standard metal wires for high school portraits. Invisalign teen was clear, allowed me to play sports, and did the alignment task flawlessly.",
+                badge: "Case Study #1922",
+                beforeImg: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=800",
+                afterImg: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=800"
+            },
+            bite: {
+                title: "Marcus' Overbite Correction",
+                method: "Custom Advanced Ceramic Braces",
+                time: "18 Months",
+                quote: "Severe skeletal overbite was causing jaw tension problems. The digital tension calculation systems utilized here restructured my jaw profiles. No pain, great results.",
+                badge: "Case Study #3319",
+                beforeImg: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=800",
+                afterImg: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=800"
+            }
+        };
+
+        function switchCategory(cat) {
+            // Update active state class names on buttons
+            document.querySelectorAll('.cat-btn').forEach(btn => {
+                btn.classList.remove('bg-white/5', 'border-l-4', 'border-brand-accentViolet', 'text-white');
+                btn.classList.add('text-slate-400');
+            });
+            const selectedBtn = document.getElementById(`btn-${cat}`);
+            if (selectedBtn) {
+                selectedBtn.classList.remove('text-slate-400');
+                selectedBtn.classList.add('bg-white/5', 'border-l-4', 'border-brand-accentViolet', 'text-white');
+            }
+
+            // Apply selected case data
+            const data = casesData[cat];
+            if (data) {
+                document.getElementById('case-badge').innerText = data.badge;
+                document.getElementById('case-title').innerText = data.title;
+                document.getElementById('case-method').innerText = data.method;
+                document.getElementById('case-time').innerText = data.time;
+                document.getElementById('case-quote').innerText = `"${data.quote}"`;
+                document.getElementById('img-before').src = data.beforeImg;
+                document.getElementById('img-after').src = data.afterImg;
+
+                // Reset slider position to 50%
+                clipSlider.value = 50;
+                afterWrap.style.clipPath = `polygon(50% 0, 100% 0, 100% 100%, 50% 100%)`;
+                dragLine.style.left = `50%`;
+            }
+        }
+
+        // 6. Meet Doctor Reels / Vlog Video Overlays Simulation
+        function playMockReel(topic) {
+            const messages = {
+                myth: "Orthodontist Myth Busting:\nNo, your metal alignment structures do not attract lightning, and ceramic dental aligners are built from spacecraft grade medical sapphire monocrystalline and will not yellow. Reach out for any technical structural guidance!",
+                behind: "Behind the Scenes:\nStep inside our 3D Printing suite. Here we convert optical scans to physical molds with +/-0.001mm tolerance. Precision clinical engineering produces the perfect fit."
+            };
+            alert(messages[topic]);
+        }
+
+        // 7. Interactive Timeline Milestone Detail Reveal Control
+        const milestoneDetails = {
+            1: "Digital 3D Scan: Our safe optical lasers construct a full mesh of your dental arch in under 2 minutes. Zero gooey molds.",
+            2: "AI Prediction: Specialized orthodontic neural engines model structural movement possibilities instantly.",
+            3: "Custom Aligner: Custom customized aligner models are printed using high biocompatibility medical-grade resins.",
+            4: "Progress Visits: Checkups can happen asynchronously from home or in-studio with zero hassle.",
+            5: "Micro-Aesthetics: At completion, we execute optional laser enamel contouring and professional-grade whitening upgrades.",
+            6: "The Reveal: Your finished smile is unlocked, complete with your final medical retainers to secure structural symmetry."
+        };
+
+        function revealTimelineDetail(step) {
+            const box = document.getElementById('timeline-detail-box');
+            const text = document.getElementById('timeline-detail-text');
+            if (box && text) {
+                box.classList.remove('hidden');
+                text.innerText = milestoneDetails[step];
+                box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        }
+
+        // 8. AI Smile Scanner Demo Script
+        function startDemoScan() {
+            const icon = document.getElementById('scan-icon');
+            const text = document.getElementById('scan-text');
+            const results = document.getElementById('scan-results');
+            
+            if (icon && text && results) {
+                text.innerText = "Analyzing structural dental symmetry parameters...";
+                icon.setAttribute('data-lucide', 'refresh-cw');
+                icon.classList.add('animate-spin');
+                lucide.createIcons();
+
+                setTimeout(() => {
+                    text.innerText = "Skeletal parameters parsed successfully!";
+                    icon.setAttribute('data-lucide', 'check-circle-2');
+                    icon.classList.remove('animate-spin');
+                    results.classList.remove('hidden');
+                    lucide.createIcons();
+                }, 2000);
+            }
+        }
+
+        // 9. Glow-Up Questionnaire Calculations
+        function setCalcValue(type, value) {
+            if (type === 'age') {
+                appState.calcAge = value;
+                document.querySelectorAll('.calc-age-btn').forEach(btn => btn.classList.remove('border-brand-accentViolet'));
+                event.target.classList.add('border-brand-accentViolet');
+            } else if (type === 'concern') {
+                appState.calcConcern = value;
+                document.querySelectorAll('.calc-concern-btn').forEach(btn => btn.classList.remove('border-brand-accentPink'));
+                event.target.classList.add('border-brand-accentPink');
+            } else if (type === 'method') {
+                appState.calcMethod = value;
+                document.querySelectorAll('.calc-method-btn').forEach(btn => btn.classList.remove('border-brand-accentViolet'));
+                event.target.classList.add('border-brand-accentViolet');
+            }
+            updateGlowUpCalculations();
+        }
+
+        function updateGlowUpCalculations() {
+            const lengthText = document.getElementById('output-length');
+            const stabilityText = document.getElementById('output-stability');
+            
+            // Dynamic simple rule calculations based on user input state
+            let lengthEst = "12 - 14 Months";
+            let stabilityEst = "High (95%)";
+
+            if (appState.calcConcern === 'minor') {
+                lengthEst = "6 - 9 Months";
+                stabilityEst = "Excellent (98%)";
+            } else if (appState.calcConcern === 'bite') {
+                lengthEst = "16 - 20 Months";
+                stabilityEst = "Stable (92%)";
+            }
+
+            if (appState.calcAge === 'teen') {
+                lengthEst = "9 - 12 Months";
+            }
+
+            if (lengthText && stabilityText) {
+                lengthText.innerText = lengthEst;
+                stabilityText.innerText = stabilityEst;
+            }
+        }
+
+        function bookCalculatedConsult() {
+            const nameField = document.getElementById('booking-name');
+            if (nameField) {
+                document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+                nameField.focus();
+            }
+        }
+
+        // 10. Financial Pricing Live Estimation Script
+        function calculatePriceEstimate() {
+            const treatmentType = document.getElementById('price-treatment').value;
+            const insuranceType = document.getElementById('price-insurance').value;
+            const downPayment = parseInt(document.getElementById('price-downpayment').value);
+            
+            // Set slider value indicator label
+            document.getElementById('downpayment-label').innerText = `$${downPayment} Down`;
+
+            let baseCost = 5400;
+            if (treatmentType === 'braces') baseCost = 4800;
+            if (treatmentType === 'combo') baseCost = 6800;
+
+            let insuranceDeduction = 0;
+            if (insuranceType === 'partial') insuranceDeduction = 1500;
+            if (insuranceType === 'high') insuranceDeduction = 2500;
+
+            let outOfPocketTotal = baseCost - insuranceDeduction;
+            if (outOfPocketTotal < 0) outOfPocketTotal = 0;
+
+            // Monthly breakdown over 24-month interest-free term
+            let remaining = outOfPocketTotal - downPayment;
+            if (remaining < 0) remaining = 0;
+            let estMonthly = Math.round(remaining / 24);
+
+            document.getElementById('out-of-pocket').innerText = `$${outOfPocketTotal.toLocaleString()}`;
+            document.getElementById('monthly-payment').innerText = `$${estMonthly}/mo`;
+        }
+        // Initialize estimation parameters on boot
+        calculatePriceEstimate();
+
+        // 11. Dental Anxiety Level Interactive Quiz Script
+        let quizAnswers = { 1: null, 2: null, 3: null };
+        function selectAnxietyAnswer(questionNum, answerVal) {
+            quizAnswers[questionNum] = answerVal;
+            
+            // Style update for selected element
+            const btns = document.querySelectorAll(`.quiz-q${questionNum}-btn`);
+            btns.forEach((btn, idx) => {
+                if (idx === (answerVal - 1)) {
+                    btn.classList.add('border-brand-accentViolet', 'bg-brand-accentViolet/15');
+                } else {
+                    btn.classList.remove('border-brand-accentViolet', 'bg-brand-accentViolet/15');
+                }
+            });
+
+            // Check if all answers populated, then show calculation
+            if (quizAnswers[1] && quizAnswers[2] && quizAnswers[3]) {
+                const recBox = document.getElementById('quiz-recommendation');
+                const recTitle = document.getElementById('quiz-comfort-title');
+                const recDesc = document.getElementById('quiz-comfort-desc');
+
+                let title = "The Standard Direct Experience";
+                let desc = "You appear comfortable with standard visits. We provide highly transparent scheduling and direct metrics so you stay optimized.";
+
+                if (quizAnswers[1] >= 2 || quizAnswers[2] >= 2) {
+                    title = "The Premium Zen Clinical Suite";
+                    desc = "We have customized your comfort protocol. During your visits, we will provide noise-canceling headphones, personalized calming music streams, and zero-jargon clinical walk-throughs.";
+                }
+                
+                if (quizAnswers[2] === 3) {
+                    title = "The Immersive VR & Relaxation Suite";
+                    desc = "For complete piece of mind, you can opt for cinematic Virtual Reality headsets during diagnostic procedures alongside comfort blankets and zero unexpected actions.";
+                }
+
+                if (recBox && recTitle && recDesc) {
+                    recBox.classList.remove('hidden');
+                    recTitle.innerText = title;
+                    recDesc.innerText = desc;
+                    recBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }
+            }
+        }
+
+        // 12. Floating AI Assistant Chat Bot Script
+        function toggleAiChat() {
+            const chatBox = document.getElementById('ai-chat-box');
+            appState.chatOpen = !appState.chatOpen;
+            if (appState.chatOpen) {
+                chatBox.classList.remove('hidden');
+                chatBox.classList.add('flex');
+            } else {
+                chatBox.classList.remove('flex');
+                chatBox.classList.add('hidden');
+            }
+        }
+
+        function sendQuickMessage(msgText) {
+            const msgContainer = document.getElementById('ai-chat-messages');
+            
+            // Append User Question
+            const userMsgHtml = `
+                <div class="flex gap-2 items-start justify-end">
+                    <div class="p-2.5 rounded-xl bg-brand-accentViolet text-white max-w-[80%]">
+                        ${msgText}
+                    </div>
+                </div>
+            `;
+            msgContainer.insertAdjacentHTML('beforeend', userMsgHtml);
+            msgContainer.scrollTop = msgContainer.scrollHeight;
+
+            // Generate Automated Medical Desk Response
+            let responseText = "Understood. The initial scan session is 100% free with no hidden charges. Our team handles direct insurance coordination.";
+            if (msgText.includes('cost')) {
+                responseText = "Standard Invisalign ranges from $99-$189/mo depending on down payments and PPO plans. No-interest structures are available.";
+            } else if (msgText.includes('Dental')) {
+                responseText = "Yes! We are inside network parameters with Delta Dental, MetLife, Cigna, and many more. We verify benefit terms instantly.";
+            }
+
+            setTimeout(() => {
+                const botMsgHtml = `
+                    <div class="flex gap-2 items-start">
+                        <div class="p-1.5 rounded-lg bg-white/5 text-slate-300">🤖</div>
+                        <div class="p-2.5 rounded-xl bg-white/5 text-slate-300 max-w-[80%]">
+                            ${responseText}
+                        </div>
+                    </div>
+                `;
+                msgContainer.insertAdjacentHTML('beforeend', botMsgHtml);
+                msgContainer.scrollTop = msgContainer.scrollHeight;
+            }, 800);
+        }
+
+        function handleUserChatInput() {
+            const inputEl = document.getElementById('chat-user-input');
+            const txt = inputEl.value.trim();
+            if (txt) {
+                sendQuickMessage(txt);
+                inputEl.value = '';
+            }
+        }
+
+        // 13. Consultation Booking Form Submission handler
+        function submitConsultBookingForm(event) {
+            event.preventDefault();
+            // Simulate API transmission delay
+            const form = document.getElementById('consult-booking-form');
+            const confirmation = document.getElementById('booking-confirmation');
+            
+            if (form && confirmation) {
+                form.classList.add('hidden');
+                confirmation.classList.remove('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
+```
